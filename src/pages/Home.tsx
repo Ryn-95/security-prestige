@@ -522,18 +522,17 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Services spécialisés en 3 colonnes */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-28 mb-48">
-          <div>
+        {/* Services spécialisés en 3 colonnes avec responsive amélioré */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-20 xl:gap-28 mb-48">
+          <div className="w-full">
             <ServiceCard
               title="Agent Cynophile"
               description="Maître-chien certifié\nZones sensibles 24/7\nRondes nocturnes\nChiens dressés et certifiés"
               image="/images/maitrechien.jpeg"
-              video="/videos/gardemaitrechien.mp4"
               delay={0.2}
             />
           </div>
-          <div>
+          <div className="w-full">
             <ServiceCard
               title="Agent de Surveillance"
               description="Monitoring vidéo 24/7\nDétection d'intrusion\nGestion des alarmes\nRapports d'intervention"
@@ -542,10 +541,10 @@ const ServicesSection = () => {
               delay={0.4}
             />
           </div>
-          <div>
+          <div className="w-full">
             <ServiceCard
               title="Accompagnement VIP"
-              description="Vos déplacements avec chauffeur privé, voiture de luxe et accompagnateur."
+              description="Services avec accompagnateur, chauffeurs et véhicules de luxe"
               image="/images/accompagnement_vip.jpeg"
               video="/videos/mercedespluie.mp4"
               delay={0.6}
@@ -2488,60 +2487,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section VIP Elite Ultra Minimaliste */}
-      <section className="py-48 bg-black relative">
-        <div className="max-w-4xl mx-auto px-8">
-          {/* En-tête ultra épuré */}
-          <div className="text-center mb-24">
-            <h2 className="text-7xl md:text-8xl font-extralight text-white mb-2 tracking-[-0.05em] leading-[0.85]">
+      {/* Section VIP Elite Ultra Minimaliste - Responsive amélioré */}
+      <section className="py-24 sm:py-32 md:py-40 lg:py-48 bg-black relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* En-tête ultra épuré avec responsive */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+            className="text-center mb-16 sm:mb-20 lg:mb-24"
+          >
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight text-white mb-2 tracking-[-0.05em] leading-[0.85]">
               Accompagnement
             </h2>
-            <div className="text-6xl md:text-7xl font-extralight mb-6" style={{ color: '#FFC300' }}>
+            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6" style={{ color: '#FFC300' }}>
               VIP Elite
             </div>
-            <div className="text-white/30 font-extralight text-lg max-w-xl mx-auto mb-12">
+            <div className="text-white/60 font-extralight text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 px-4">
               Services avec accompagnateur, chauffeurs et véhicules de luxe
             </div>
-          </div>
+          </motion.div>
 
-          {/* Statistiques ultra épurées */}
-          <div className="grid grid-cols-3 gap-16 mb-16 text-center">
+          {/* Statistiques ultra épurées avec responsive */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.3 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 lg:mb-20 text-center"
+          >
             <div className="space-y-2">
-              <div className="text-4xl font-extralight" style={{ color: '#FFC300' }}>24/7</div>
-              <div className="text-white/40 font-extralight text-xs uppercase tracking-[0.4em]">DISPONIBILITÉ</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extralight" style={{ color: '#FFC300' }}>24/7</div>
+              <div className="text-white/40 font-extralight text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">DISPONIBILITÉ</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-extralight" style={{ color: '#FFC300' }}>Premium</div>
-              <div className="text-white/40 font-extralight text-xs uppercase tracking-[0.4em]">SERVICE</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extralight" style={{ color: '#FFC300' }}>Premium</div>
+              <div className="text-white/40 font-extralight text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">SERVICE</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-extralight" style={{ color: '#FFC300' }}>100%</div>
-              <div className="text-white/40 font-extralight text-xs uppercase tracking-[0.4em]">{t('discretion').toUpperCase()}</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extralight" style={{ color: '#FFC300' }}>100%</div>
+              <div className="text-white/40 font-extralight text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">{t('discretion').toUpperCase()}</div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Texte unique demandé */}
-          <div className="text-center mt-12">
+          {/* Texte et image avec responsive */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.6 }}
+            className="text-center"
+          >
             <p
-              className="text-white/80 text-2xl font-light max-w-2xl mx-auto mb-24 text-center"
+              className="text-white/80 text-lg sm:text-xl lg:text-2xl font-light max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-24 text-center px-4"
               style={{ 
                 fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', 
                 fontWeight: 100,
                 lineHeight: '1.6'
               }}
             >
-              Vos déplacements avec chauffeur privé,<br />
-              voiture de luxe et accompagnateur.
+              Vos déplacements avec chauffeur privé,<br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>voiture de luxe et accompagnateur.
             </p>
             <div className="relative max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl">
               <img
                 src="/images/agentchauffeur.jpeg"
                 alt="Agent Chauffeur VIP Elite"
-                className="w-full h-[400px] object-cover rounded-xl border border-amber-400/10"
+                className="w-full h-[300px] sm:h-[350px] lg:h-[400px] object-cover rounded-xl border border-amber-400/10"
                 style={{ boxShadow: '0 8px 32px 0 rgba(0,0,0,0.25)' }}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -2626,56 +2643,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer ultra fidèle à la capture avec logo agrandi et animé */}
-      <footer className="bg-black pt-36 pb-10">
-        <div className="max-w-6xl mx-auto flex flex-col items-center w-full px-4">
-          {/* Logo centré, gigantesque et animation naturelle Apple */}
+      {/* Footer professionnel ultra épuré avec responsive amélioré */}
+      <footer className="bg-black pt-24 sm:pt-32 lg:pt-40 pb-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Logo centré avec animation subtile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative mb-20"
+            className="text-center mb-16 sm:mb-20 lg:mb-24"
           >
             {/* Halo ultra subtil */}
             <motion.div
               animate={{
-                opacity: [0.05, 0.15, 0.05],
-                scale: [1, 1.05, 1],
+                opacity: [0.03, 0.08, 0.03],
+                scale: [1, 1.02, 1],
               }}
               transition={{
                 duration: 8,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -inset-12 bg-amber-400/10 rounded-full blur-2xl"
+              className="absolute inset-0 bg-amber-400/5 rounded-full blur-3xl"
+              style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%', width: '300px', height: '300px' }}
             />
             
-            {/* Logo avec animation naturelle très subtile */}
+            {/* Logo avec animation très subtile */}
             <motion.img 
               src="/images/vrailogo.jpeg" 
               alt="Prestige Sécurité" 
-              className="h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[32rem] w-auto relative z-10"
+              className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 w-auto mx-auto relative z-10"
               animate={{
-                x: [0, 3, -4, 5, -3, 2, -5, 4, -2, 3, 0],
-                y: [0, -3, 4, -5, 2, -4, 3, -2, 5, -3, 0],
-                rotate: [0, 0.8, -0.6, 1.2, -0.9, 0.5, -1.1, 0.7, -0.4, 0.9, 0],
-                scale: [1, 1.008, 0.992, 1.012, 0.988, 1.006, 0.994, 1.010, 0.990, 1.004, 1],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-              }}
-            />
-            
-            {/* Cercle unique ultra subtil */}
-            <motion.div
-              className="absolute inset-0 rounded-full border border-amber-400/10"
-              style={{ margin: '-3rem' }}
-              animate={{
-                opacity: [0.1, 0.2, 0.1],
+                y: [0, -2, 0, 2, 0],
+                rotate: [0, 0.3, -0.2, 0.5, 0],
+                scale: [1, 1.005, 0.998, 1.003, 1],
               }}
               transition={{
                 duration: 8,
@@ -2685,51 +2688,51 @@ export default function Home() {
             />
           </motion.div>
 
-          {/* Réseaux sociaux */}
+          {/* Titre "SUIVEZ-NOUS" */}
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h4 className="text-amber-400 font-extralight text-lg mb-8 tracking-[0.15em] uppercase">
+            <h4 className="text-amber-400/80 font-extralight text-base sm:text-lg tracking-[0.2em] uppercase">
               {t('followUs')}
             </h4>
-            
+            <div className="w-16 h-[1px] bg-amber-400/30 mx-auto mt-4" />
           </motion.div>
 
-          {/* Grille d'informations */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
+          {/* Grille d'informations responsive */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
 
             {/* Adresses */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.4 }}
-              className="space-y-8"
-          >
+              className="space-y-6 sm:space-y-8"
+            >
               {/* Paris */}
-              <div className="relative group">
-              <div className="space-y-3">
-                <span className="block font-semibold text-white text-lg">{t('parisAddress')}</span>
-                  <div className="text-white/70 font-light leading-relaxed">
-                  {t('parisStreet')}<br />
-                  {t('parisPostal')}
-              </div>
-              </div>
+              <div className="relative">
+                <div className="space-y-2">
+                  <h5 className="text-white text-base sm:text-lg font-medium tracking-wide">{t('parisAddress')}</h5>
+                  <div className="text-white/70 font-light text-sm sm:text-base leading-relaxed">
+                    {t('parisStreet')}<br />
+                    {t('parisPostal')}
+                  </div>
+                </div>
               </div>
               
               {/* Roubaix */}
-              <div className="relative group">
-                <div className="space-y-3">
-                <span className="block font-semibold text-white text-lg">{t('roubaixAddress')}</span>
-                  <div className="text-white/70 font-light leading-relaxed">
-                  {t('roubaixStreet')}<br />
-                  {t('roubaixPostal')}
-            </div>
-            </div>
+              <div className="relative">
+                <div className="space-y-2">
+                  <h5 className="text-white text-base sm:text-lg font-medium tracking-wide">{t('roubaixAddress')}</h5>
+                  <div className="text-white/70 font-light text-sm sm:text-base leading-relaxed">
+                    {t('roubaixStreet')}<br />
+                    {t('roubaixPostal')}
+                  </div>
+                </div>
               </div>
             </motion.div>
 
@@ -2739,11 +2742,20 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.6 }}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
-              <span className="font-semibold text-white text-lg">{t('contactSection')}</span>
-              <span className="text-xl text-[#FFC300] font-bold tracking-wider">{t('phone')}</span>
-              <span className="font-light">{t('email')}</span>
+              <h5 className="text-white text-base sm:text-lg font-medium tracking-wide">{t('contactSection')}</h5>
+              <div className="space-y-3">
+                <div className="text-lg sm:text-xl lg:text-2xl text-amber-400 font-bold tracking-wider">
+                  {t('phone')}
+                </div>
+                <div className="text-white/70 font-light text-sm sm:text-base">
+                  {t('email')}
+                </div>
+                <div className="text-white/50 font-light text-xs sm:text-sm uppercase tracking-wider">
+                  DISPONIBLE 24H/24 • 7J/7
+                </div>
+              </div>
             </motion.div>
 
             {/* Autorisation */}
@@ -2752,33 +2764,45 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.8 }}
-              className="space-y-4"
+              className="space-y-4 sm:col-span-2 lg:col-span-1"
             >
-                <div className="font-semibold text-white text-lg">{t('authorization')}</div>
-                <div className="font-light">{t('authorizationNumber')}</div>
+              <h5 className="text-white text-base sm:text-lg font-medium tracking-wide">{t('authorization')}</h5>
+              <div className="text-white/70 font-light text-sm sm:text-base">
+                {t('authorizationNumber')}
+              </div>
               
-              <div className="text-white/50 text-sm font-light leading-relaxed pt-4">
-                {t('legalNotice')}<br />
-                <em>
+              <div className="text-white/50 text-xs sm:text-sm font-light leading-relaxed pt-2">
+                <div className="mb-2">{t('legalNotice')}</div>
+                <em className="text-white/40">
                   {t('legalText')}
                 </em>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
 
           </div>
+
+          {/* Ligne de séparation */}
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, delay: 1 }}
+            className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"
+          />
 
           {/* Copyright */}
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: 1 }}
-            className="text-center pt-8 border-t border-white/10"
+            transition={{ duration: 1.5, delay: 1.2 }}
+            className="text-center"
           >
-            <p className="text-white/40 font-light text-sm">
-            {t('allRightsReserved')}
+            <p className="text-white/40 font-light text-xs sm:text-sm tracking-wide">
+              {t('allRightsReserved')}
             </p>
           </motion.div>
+          
         </div>
       </footer>
       
