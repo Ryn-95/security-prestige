@@ -5,6 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Core Web Vitals Optimisations CRITIQUES -->
+    <link rel="preload" href="/images/vrailogo.jpeg" as="image" type="image/jpeg" />
+    <link rel="preload" href="/images/photo_groupe.jpeg" as="image" type="image/jpeg" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" as="style" />
+    
+    <!-- DNS Prefetch & Preconnect pour Performance MAXIMALE -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Resource Hints pour LCP optimal -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    
     <!-- SEO Meta Tags Ultra-Optimisés -->
     <title>Prestige Sécurité - Société de Sécurité Privée Paris Roubaix | Gardiennage Agent SSIAP 24h/24</title>
     <meta name="description" content="🥇 Prestige Sécurité : Société experte en sécurité privée à Paris et Roubaix. Gardiennage 24h/24, agents SSIAP, surveillance magasin, sécurité cynophile, protection VIP. Intervention rapide, devis gratuit. AUT-059-2123." />
@@ -50,13 +64,7 @@
     <link rel="alternate" hreflang="fr" href="https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app" />
     <link rel="alternate" hreflang="en" href="https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app?lang=en" />
     
-    <!-- DNS Prefetch & Preconnect pour Performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Fonts optimisés -->
+    <!-- Fonts optimisés avec display=swap pour CLS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Additional Meta -->
@@ -198,7 +206,94 @@
     }
     </script>
 
-    <!-- Service Schema -->
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services de Sécurité",
+          "item": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app#services"
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quels sont vos tarifs de gardiennage 24h/24 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos tarifs de gardiennage varient selon le type de site et les spécificités de votre demande. Contactez-nous au 07 81 84 42 36 pour un devis personnalisé gratuit sous 24h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous sur Paris et Roubaix ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Prestige Sécurité intervient sur Paris (75011) et Roubaix (59100) ainsi que dans toute l'Île-de-France et les Hauts-de-France. Intervention rapide 24h/24."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Êtes-vous agréés et certifiés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prestige Sécurité dispose de l'autorisation préfectorale AUT-059-2123-12-09-20240960800. Nos agents sont certifiés SSIAP et formés régulièrement selon les normes en vigueur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des services de sécurité cynophile ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous proposons des services d'agents cynophiles avec maîtres-chiens certifiés et chiens dressés pour la détection et la dissuasion dans les zones sensibles."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- VideoObject Schema pour les vidéos de services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Services de Sécurité Prestige - Gardiennage et Surveillance",
+      "description": "Découvrez nos services de sécurité privée : gardiennage 24h/24, agents SSIAP, surveillance magasin, protection VIP à Paris et Roubaix",
+      "thumbnailUrl": "/images/vrailogo.jpeg",
+      "contentUrl": "/videos/securitemagasin.mp4",
+      "embedUrl": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app",
+      "duration": "PT2M30S",
+      "uploadDate": "2024-01-20",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Prestige Sécurité",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/images/vrailogo.jpeg"
+        }
+      }
+    }
+    </script>
+
+    <!-- Service Schema détaillé -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

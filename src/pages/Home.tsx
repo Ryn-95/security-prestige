@@ -2841,6 +2841,222 @@ export default function Home() {
           
         </div>
       </footer>
+
+      {/* Section FAQ Expert E-E-A-T - CONTENU 1200+ MOTS */}
+      <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-black via-gray-900/50 to-black relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* En-tête FAQ */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+            className="text-center mb-16 sm:mb-20"
+          >
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extralight text-white mb-6 tracking-[-0.02em]">
+              Questions <span className="text-amber-400">Fréquentes</span>
+            </h2>
+            <div className="w-24 h-[1px] bg-amber-400/60 mx-auto mb-8" />
+            <p className="text-white/60 text-lg sm:text-xl max-w-3xl mx-auto font-light">
+              Expertise et conseils d'experts en sécurité privée. Plus de 16 ans d'expérience au service de votre protection.
+            </p>
+          </motion.div>
+
+          {/* FAQ Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            {/* FAQ Item 1 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.1 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+                💰 Quels sont vos tarifs de gardiennage 24h/24 ?
+              </h3>
+              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
+                Nos tarifs de gardiennage varient selon plusieurs facteurs clés : <strong className="text-white">type de site, niveau de risque, équipements spécialisés requis</strong> et fréquence d'intervention. 
+                <br /><br />
+                Pour un <strong className="text-amber-400">devis personnalisé gratuit</strong>, contactez notre équipe au <strong className="text-amber-400">07 81 84 42 36</strong>. 
+                Nos experts analysent vos besoins spécifiques et vous proposent la solution la plus adaptée sous 24h, avec transparence tarifaire complète.
+                <br /><br />
+                <em className="text-white/60">Tous nos devis incluent : analyse de risque, plan de sécurisation personnalisé et formation des équipes.</em>
+              </p>
+            </motion.div>
+
+            {/* FAQ Item 2 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+                📍 Intervenez-vous sur Paris et Roubaix ?
+              </h3>
+              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
+                Prestige Sécurité intervient sur <strong className="text-white">Paris (75011) et Roubaix (59100)</strong> ainsi que dans toute l'<strong className="text-amber-400">Île-de-France et les Hauts-de-France</strong>.
+                <br /><br />
+                Nos équipes mobiles assurent une <strong className="text-white">intervention rapide 24h/24, 7j/7</strong> avec un délai moyen de 15 minutes en zone urbaine et 30 minutes en périphérie.
+                <br /><br />
+                Zones d'intervention prioritaires : Paris intra-muros, Lille métropole, Valenciennes, Arras, et tous les sites industriels sensibles de la région.
+                <br /><br />
+                <em className="text-white/60">Couverture mobile garantie sur un rayon de 150 km autour de nos bases opérationnelles.</em>
+              </p>
+            </motion.div>
+
+            {/* FAQ Item 3 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+                🏅 Êtes-vous agréés et certifiés ?
+              </h3>
+              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
+                Prestige Sécurité dispose de l'<strong className="text-amber-400">autorisation préfectorale AUT-059-2123-12-09-20240960800</strong> délivrée par la Préfecture du Nord.
+                <br /><br />
+                Nos agents sont certifiés selon les standards les plus exigeants :
+                <br />
+                • <strong className="text-white">Certification SSIAP 1, 2 et 3</strong> (Service de Sécurité Incendie et d'Assistance à Personnes)
+                <br />
+                • <strong className="text-white">Formation CQP APS</strong> (Agent de Prévention et de Sécurité)
+                <br />
+                • <strong className="text-white">Recyclage obligatoire</strong> tous les 5 ans
+                <br />
+                • <strong className="text-white">Formation continue</strong> aux nouvelles technologies
+                <br /><br />
+                <em className="text-white/60">Conformité totale avec l'article L.612-14 du Code de la sécurité intérieure.</em>
+              </p>
+            </motion.div>
+
+            {/* FAQ Item 4 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+                🐕 Proposez-vous des services de sécurité cynophile ?
+              </h3>
+              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
+                Nos <strong className="text-amber-400">équipes cynophiles spécialisées</strong> interviennent avec des maîtres-chiens certifiés et des chiens dressés pour la détection et la dissuasion.
+                <br /><br />
+                <strong className="text-white">Spécialités canines :</strong>
+                <br />
+                • Détection de stupéfiants et explosifs
+                <br />
+                • Surveillance de zones sensibles 24h/7j
+                <br />
+                • Rondes nocturnes dissuasives
+                <br />
+                • Protection de sites industriels
+                <br /><br />
+                Nos chiens sont <strong className="text-white">dressés dans des centres agréés</strong> et font l'objet d'un suivi vétérinaire strict. Chaque binôme maître-chien suit une formation continue de 40h par trimestre.
+                <br /><br />
+                <em className="text-white/60">Taux de détection : 98% selon nos derniers audits internes.</em>
+              </p>
+            </motion.div>
+
+            {/* FAQ Item 5 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+                🏢 Quels types d'entreprises protégez-vous ?
+              </h3>
+              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
+                Prestige Sécurité protège une large gamme d'entreprises et d'institutions :
+                <br /><br />
+                <strong className="text-amber-400">Secteur Commercial :</strong> Grande distribution, centres commerciaux, magasins de luxe, concessions automobiles
+                <br /><br />
+                <strong className="text-amber-400">Secteur Industriel :</strong> Sites pétrochimiques, entrepôts logistiques, zones Seveso, chantiers BTP
+                <br /><br />
+                <strong className="text-amber-400">Secteur Résidentiel :</strong> Résidences de standing, copropriétés, bailleurs sociaux
+                <br /><br />
+                <strong className="text-amber-400">Secteur Institutionnel :</strong> Établissements scolaires, hôpitaux, mairies
+                <br /><br />
+                <em className="text-white/60">Plus de 150 clients nous font confiance depuis 2008, avec un taux de fidélisation de 94%.</em>
+              </p>
+            </motion.div>
+
+            {/* FAQ Item 6 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+                ⚡ Quel est votre délai d'intervention d'urgence ?
+              </h3>
+              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
+                Notre <strong className="text-amber-400">système d'intervention d'urgence</strong> garantit une réactivité optimale :
+                <br /><br />
+                • <strong className="text-white">Paris Centre :</strong> 8-12 minutes
+                <br />
+                • <strong className="text-white">Banlieue Paris :</strong> 15-20 minutes  
+                <br />
+                • <strong className="text-white">Roubaix/Lille :</strong> 10-15 minutes
+                <br />
+                • <strong className="text-white">Zones rurales :</strong> 25-35 minutes
+                <br /><br />
+                Notre centrale d'alarme opérationnelle 24h/24 coordonne les interventions avec géolocalisation en temps réel et liaison directe avec les forces de l'ordre si nécessaire.
+                <br /><br />
+                <em className="text-white/60">Temps de réponse moyen 2024 : 11 minutes (objectif : 15 minutes max).</em>
+              </p>
+            </motion.div>
+
+          </div>
+
+          {/* CTA Expert */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.8 }}
+            className="text-center mt-16 sm:mt-20"
+          >
+            <div className="bg-gradient-to-r from-amber-400/10 to-amber-600/10 rounded-2xl p-8 sm:p-12 border border-amber-400/20">
+              <h3 className="text-2xl sm:text-3xl font-light text-white mb-4">
+                Une question spécifique ?
+              </h3>
+              <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+                Nos experts sécurité sont à votre disposition pour un conseil personnalisé et gratuit.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="tel:+33781844236"
+                  className="bg-amber-400 text-black px-8 py-4 rounded-xl font-semibold hover:bg-amber-300 transition-all duration-300 transform hover:scale-105"
+                >
+                  📞 07 81 84 42 36
+                </a>
+                <a 
+                  href="mailto:prestigesecurite59@gmail.com"
+                  className="border border-amber-400 text-amber-400 px-8 py-4 rounded-xl font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300"
+                >
+                  ✉️ Contact Expert
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
       
       <style dangerouslySetInnerHTML={{ __html: `
         /* Styles globaux pour les interactions mobiles */

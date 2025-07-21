@@ -1,0 +1,176 @@
+{
+  "dashboard": {
+    "name": "Prestige Sécurité - SEO Performance Dashboard",
+    "description": "Monitoring SEO temps réel pour atteindre Top 3 Google",
+    "dataSources": [
+      {
+        "name": "Search Console",
+        "type": "SEARCH_CONSOLE",
+        "siteUrl": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app"
+      },
+      {
+        "name": "Google Analytics 4",
+        "type": "GA4",
+        "propertyId": "G-XXXXXXXXXX"
+      },
+      {
+        "name": "PageSpeed Insights",
+        "type": "PSI_API",
+        "url": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app"
+      }
+    ],
+    "kpis": [
+      {
+        "name": "INP (p75)",
+        "target": "≤ 200ms",
+        "alert": "> 200ms",
+        "source": "PSI_API",
+        "metric": "interaction_to_next_paint"
+      },
+      {
+        "name": "LCP",
+        "target": "≤ 2.5s",
+        "alert": "> 2.5s",
+        "source": "PSI_API",
+        "metric": "largest_contentful_paint"
+      },
+      {
+        "name": "CLS", 
+        "target": "≤ 0.1",
+        "alert": "> 0.1",
+        "source": "PSI_API",
+        "metric": "cumulative_layout_shift"
+      },
+      {
+        "name": "Lighthouse Performance",
+        "target": "≥ 95",
+        "alert": "< 95",
+        "source": "PSI_API",
+        "metric": "performance_score"
+      },
+      {
+        "name": "Pages Indexées",
+        "target": "≥ 98%",
+        "alert": "< 98%",
+        "source": "SEARCH_CONSOLE",
+        "metric": "indexed_pages_percentage"
+      },
+      {
+        "name": "CTR Organique",
+        "target": "≥ 6%",
+        "alert": "< 6%",
+        "source": "SEARCH_CONSOLE",
+        "metric": "average_ctr"
+      },
+      {
+        "name": "Sessions Organiques",
+        "target": "+30% vs baseline",
+        "alert": "< baseline",
+        "source": "GA4",
+        "metric": "organic_sessions"
+      },
+      {
+        "name": "Position Moyenne",
+        "target": "≤ 3",
+        "alert": "> 3",
+        "source": "SEARCH_CONSOLE",
+        "metric": "average_position"
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Core Web Vitals Dégradation",
+        "condition": "INP > 200ms OR LCP > 2.5s OR CLS > 0.1",
+        "action": "slack_notification",
+        "channel": "#seo-alerts",
+        "message": "🚨 ALERTE CWV: {metric} = {value} (seuil: {threshold})"
+      },
+      {
+        "name": "Chute Positions",
+        "condition": "average_position > 5 FOR keywords IN ('sécurité privée paris', 'gardiennage roubaix', 'agent ssiap')",
+        "action": "slack_notification",
+        "channel": "#seo-alerts",
+        "message": "📉 CHUTE POSITIONS: {keyword} position {position}"
+      },
+      {
+        "name": "Erreurs 4xx/5xx",
+        "condition": "error_rate > 1%",
+        "action": "slack_notification",
+        "channel": "#seo-alerts",
+        "message": "🔴 ERREURS SERVEUR: {error_rate}% d'erreurs détectées"
+      },
+      {
+        "name": "Google Core Update",
+        "condition": "volatility > 7 (Semrush Sensor)",
+        "action": "slack_notification",
+        "channel": "#seo-alerts",
+        "message": "🌊 CORE UPDATE: Volatilité SERP élevée ({volatility})"
+      }
+    ],
+    "charts": [
+      {
+        "type": "scorecard",
+        "title": "KPIs Critiques",
+        "metrics": ["INP", "LCP", "CLS", "Lighthouse Performance"],
+        "layout": "2x2_grid"
+      },
+      {
+        "type": "time_series",
+        "title": "Évolution Trafic Organique",
+        "metrics": ["organic_sessions", "organic_users"],
+        "period": "last_30_days"
+      },
+      {
+        "type": "table",
+        "title": "Top Keywords",
+        "metrics": ["keyword", "position", "clicks", "impressions", "ctr"],
+        "filters": ["position <= 10"],
+        "sort": "clicks DESC"
+      },
+      {
+        "type": "heat_map",
+        "title": "Pages Performance",
+        "x_axis": "page_url",
+        "y_axis": "day_of_week",
+        "metric": "clicks",
+        "period": "last_7_days"
+      }
+    ],
+    "automations": [
+      {
+        "name": "Rapport Hebdomadaire",
+        "trigger": "weekly_monday_9am",
+        "action": "send_email",
+        "recipients": ["seo@prestigesecurite.fr"],
+        "template": "weekly_seo_report",
+        "include": ["kpis_summary", "top_keywords", "cwv_status", "alerts"]
+      },
+      {
+        "name": "Indexation Sitemap",
+        "trigger": "daily_6am",
+        "action": "submit_sitemap",
+        "url": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/sitemap.xml"
+      }
+    ]
+  },
+  "setup_instructions": {
+    "step1": "Connecter Search Console (site vérifié requis)",
+    "step2": "Connecter GA4 (code de suivi installé)", 
+    "step3": "Configurer Slack Webhook pour alertes",
+    "step4": "Activer PSI API (clé requise)",
+    "step5": "Importer ce template dans Looker Studio",
+    "step6": "Configurer alertes automatiques"
+  },
+  "target_keywords": [
+    "sécurité privée Paris",
+    "gardiennage 24h/24 Roubaix", 
+    "agent SSIAP Paris",
+    "surveillance magasin",
+    "société sécurité privée",
+    "protection VIP Paris",
+    "agent cynophile Roubaix",
+    "sécurité zones sensibles",
+    "gardiennage Île-de-France",
+    "surveillance Hauts-de-France"
+  ]
+} 
