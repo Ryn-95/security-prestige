@@ -24,7 +24,7 @@ export default function Contact() {
     resolver: zodResolver(contactSchema),
   })
 
-  const onSubmit = async (data: ContactForm) => {
+  const onSubmit = async (_data: ContactForm) => {
     try {
       // Simuler l'envoi du formulaire
       await new Promise((resolve) => setTimeout(resolve, 1000))

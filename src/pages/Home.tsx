@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
-import CountUp from 'react-countup';
 
 // Fonction de traduction complète
 const translations = {
@@ -813,7 +812,7 @@ export default function Home() {
   const [loadingProgress, setLoadingProgress] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [currentService, setCurrentService] = useState(0)
+  const [_currentService, setCurrentService] = useState(0)
 
   // Fonction pour obtenir la traduction
   const t = (key: string) => {
@@ -870,11 +869,11 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isMobileMenuOpen])
 
-  const nextService = () => {
+  const _nextService = () => {
     setCurrentService((prev) => (prev + 1) % services.length)
   }
 
-  const prevService = () => {
+  const _prevService = () => {
     setCurrentService((prev) => (prev - 1 + services.length) % services.length)
   }
 
@@ -918,7 +917,7 @@ const services = [
     }
   ];
 
-  const containerVariants = {
+  const _containerVariants = {
     hidden: { opacity: 0 },
   visible: { 
     opacity: 1, 
@@ -929,7 +928,7 @@ const services = [
   }
 }
 
-  const itemVariants = {
+  const _itemVariants = {
     hidden: { y: 20, opacity: 0 },
   visible: {
       y: 0,
