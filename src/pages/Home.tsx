@@ -812,7 +812,6 @@ export default function Home() {
   const [loadingProgress, setLoadingProgress] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [_currentService, setCurrentService] = useState(0)
 
   // Fonction pour obtenir la traduction
   const t = (key: string) => {
@@ -868,46 +867,6 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isMobileMenuOpen])
-
-  const services = [
-    {
-        title: t('serviceSecurity'),
-        description: t('securityDescription'),
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        title: t('serviceMagasin'),
-        description: t('magasinDescription'),
-        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        title: t('serviceIncendie'),
-        description: t('incendieDescription'),
-        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        title: t('serviceCynophile'),
-        description: t('cynophileDescription'),
-        image: 'https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        title: t('serviceVideo'),
-        description: t('videoDescription'),
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        title: t('serviceVip'),
-        subtitle: t('vipSubtitle'),
-        description: t('vipDescription'),
-        image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        title: t('vipAccompagnement'),
-        description: t('vipAccompagnementDesc'),
-        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        video: '/videos/mercedes.mp4'
-      }
-    ];
 
   return (
     <div className="bg-black text-white min-h-screen font-thin relative overflow-hidden">
