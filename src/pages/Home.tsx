@@ -529,6 +529,7 @@ const ServicesSection = () => {
               title="Agent Cynophile"
               description="Maître-chien certifié\nZones sensibles 24/7\nRondes nocturnes\nChiens dressés et certifiés"
               image="/images/maitrechien.jpeg"
+              video="/videos/gardemaitrechien.mp4"
               delay={0.2}
             />
           </div>
