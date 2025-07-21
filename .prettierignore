@@ -1,0 +1,6 @@
+# .prettierignore
+# Ignorer les fichiers de build et de dépendances
+node_modules/
+dist/
+build/
+coverage/
