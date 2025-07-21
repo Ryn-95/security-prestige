@@ -1,0 +1,42 @@
+User-agent: *
+Allow: /
+
+# Pages importantes à indexer en priorité
+Allow: /
+Allow: /#services
+Allow: /#about  
+Allow: /#contact
+Allow: /contact
+
+# Assets et ressources
+Allow: /images/
+Allow: /videos/
+Allow: /src/assets/
+
+# Fichiers SEO
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Pages interdites (aucune pour l'instant)
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/sitemap.xml
+
+# Crawl-delay (optionnel)
+Crawl-delay: 1
+
+# Google Bot spécifique
+User-agent: Googlebot
+Allow: /
+
+# Bing Bot spécifique  
+User-agent: Bingbot
+Allow: /
+
+# Directives pour les moteurs de recherche français
+User-agent: OrangeBot
+Allow: /
+
+User-agent: VoilaBot
+Allow: / 

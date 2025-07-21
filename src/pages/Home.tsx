@@ -475,7 +475,7 @@ const ServicesSection = () => {
               ease: "easeInOut",
             }}
           >
-            Services
+            Services de Sécurité
           </motion.h2>
 
           <motion.div
@@ -489,7 +489,7 @@ const ServicesSection = () => {
               fontWeight: 100
             }}
           >
-            Excellence sécuritaire
+            Gardiennage • Surveillance • Protection VIP
           </motion.p>
         </motion.div>
 
@@ -1322,328 +1322,363 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Hero Section Ultra Épurée & Artistique - Version Ultime */}
-      <section className="relative min-h-screen overflow-hidden flex items-center justify-center pt-40 pb-32 px-4 sm:px-6 lg:px-8 text-center">
-        {/* Fond noir absolu */}
-        <div className="absolute inset-0 bg-black" />
-        
-        {/* Grille technique blueprint ultra fine */}
-        <div className="absolute inset-0 opacity-[0.008]" 
-             style={{
-               backgroundImage: `
-                 linear-gradient(rgba(255, 195, 0, 0.2) 0.5px, transparent 0.5px),
-                 linear-gradient(90deg, rgba(255, 195, 0, 0.2) 0.5px, transparent 0.5px)
-               `,
-               backgroundSize: '10px 10px'
-             }}
-        />
-
-        {/* Ligne d'horizon principale - Animation ultra lente */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 12, delay: 3, ease: "easeInOut" }}
-          className="absolute top-1/2 left-0 right-0 h-[0.5px] bg-amber-400/70 transform -translate-y-1/2"
-        />
-
-        {/* Lignes de fuite verticales */}
-        <motion.div
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 10, delay: 4, ease: "easeInOut" }}
-          className="absolute top-0 bottom-0 left-4 sm:left-8 lg:left-16 w-[0.5px] bg-gradient-to-b from-transparent via-amber-400/50 to-transparent"
-        />
-        <motion.div
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 10, delay: 4.5, ease: "easeInOut" }}
-          className="absolute top-0 bottom-0 right-4 sm:right-8 lg:right-16 w-[0.5px] bg-gradient-to-b from-transparent via-amber-400/50 to-transparent"
-        />
-
-        {/* Cadre technique avec mesures */}
-        <div className="absolute inset-x-4 sm:inset-x-8 lg:inset-x-12 top-20 bottom-12 border border-amber-400/20 pointer-events-none">
-          {/* Marqueurs de mesure aux coins */}
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 6 }}
-            className="absolute -top-1 -left-1 w-2 h-2 sm:w-3 sm:h-3 border-l-2 border-t-2 border-amber-400/60"
-          />
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 6.2 }}
-            className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 border-r-2 border-t-2 border-amber-400/60"
-          />
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 6.4 }}
-            className="absolute -bottom-1 -left-1 w-2 h-2 sm:w-3 sm:h-3 border-l-2 border-b-2 border-amber-400/60"
-          />
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 6.6 }}
-            className="absolute -bottom-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 border-r-2 border-b-2 border-amber-400/60"
+      {/* Hero Section Ultra Épurée & Artistique - Version Ultime SEO */}
+      <main>
+        <section className="relative min-h-screen overflow-hidden flex items-center justify-center pt-40 pb-32 px-4 sm:px-6 lg:px-8 text-center">
+          {/* Fond noir absolu */}
+          <div className="absolute inset-0 bg-black" />
+          
+          {/* Grille technique blueprint ultra fine */}
+          <div className="absolute inset-0 opacity-[0.008]" 
+               style={{
+                 backgroundImage: `
+                   linear-gradient(rgba(255, 195, 0, 0.2) 0.5px, transparent 0.5px),
+                   linear-gradient(90deg, rgba(255, 195, 0, 0.2) 0.5px, transparent 0.5px)
+                 `,
+                 backgroundSize: '10px 10px'
+               }}
           />
 
-          {/* Lignes de cotation */}
+          {/* Ligne d'horizon principale - Animation ultra lente */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 3, delay: 7 }}
-            className="absolute -top-6 left-1/4 right-1/4 h-[0.5px] bg-amber-400/40"
+            transition={{ duration: 12, delay: 3, ease: "easeInOut" }}
+            className="absolute top-1/2 left-0 right-0 h-[0.5px] bg-amber-400/70 transform -translate-y-1/2"
+          />
+
+          {/* Lignes de fuite verticales */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            transition={{ duration: 10, delay: 4, ease: "easeInOut" }}
+            className="absolute top-0 bottom-0 left-4 sm:left-8 lg:left-16 w-[0.5px] bg-gradient-to-b from-transparent via-amber-400/50 to-transparent"
           />
           <motion.div
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
-            transition={{ duration: 3, delay: 7.5 }}
-            className="absolute -left-6 top-1/4 bottom-1/4 w-[0.5px] bg-amber-400/40"
+            transition={{ duration: 10, delay: 4.5, ease: "easeInOut" }}
+            className="absolute top-0 bottom-0 right-4 sm:right-8 lg:right-16 w-[0.5px] bg-gradient-to-b from-transparent via-amber-400/50 to-transparent"
           />
-        </div>
-        
-        {/* Conteneur principal */}
-        <div className="relative z-10 w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 4, ease: "easeOut", delay: 2 }}
-            className="relative"
-          >
-            {/* Image avec système de mesure technique */}
-            <div className="relative inline-block">
+
+          {/* Cadre technique avec mesures */}
+          <div className="absolute inset-x-4 sm:inset-x-8 lg:inset-x-12 top-20 bottom-12 border border-amber-400/20 pointer-events-none">
+            {/* Marqueurs de mesure aux coins */}
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: 6 }}
+              className="absolute -top-1 -left-1 w-2 h-2 sm:w-3 sm:h-3 border-l-2 border-t-2 border-amber-400/60"
+            />
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: 6.2 }}
+              className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 border-r-2 border-t-2 border-amber-400/60"
+            />
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: 6.4 }}
+              className="absolute -bottom-1 -left-1 w-2 h-2 sm:w-3 sm:h-3 border-l-2 border-b-2 border-amber-400/60"
+            />
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: 6.6 }}
+              className="absolute -bottom-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 border-r-2 border-b-2 border-amber-400/60"
+            />
+
+            {/* Lignes de cotation */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 3, delay: 7 }}
+              className="absolute -top-6 left-1/4 right-1/4 h-[0.5px] bg-amber-400/40"
+            />
+            <motion.div
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ duration: 3, delay: 7.5 }}
+              className="absolute -left-6 top-1/4 bottom-1/4 w-[0.5px] bg-amber-400/40"
+            />
+          </div>
+          
+          {/* Conteneur principal */}
+          <div className="relative z-10 w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* H1 Principal SEO Ultra-Optimisé */}
+            <header className="text-center mb-8 sm:mb-12">
+              <motion.h1 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut", delay: 1.5 }}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extralight text-white mb-4 tracking-[-0.02em] leading-tight"
+                style={{ 
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
+                  fontWeight: 100
+                }}
+              >
+                <span className="text-amber-400">Prestige Sécurité</span><br className="sm:hidden" />
+                <span className="sm:hidden"> </span>Société de Sécurité Privée
+              </motion.h1>
               
-              {/* Image pure */}
-              <div className="relative">
-            <img 
-              src="/images/photo_groupe.jpeg"
-              alt="Équipe Prestige Sécurité"
-                  className="max-w-full max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] lg:max-h-[55vh] object-contain w-auto h-auto filter contrast-105 brightness-102"
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, ease: "easeOut", delay: 2 }}
+                className="text-sm sm:text-base md:text-lg text-white/70 font-extralight max-w-3xl mx-auto mb-6"
+                style={{ 
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
+                  fontWeight: 100
+                }}
+              >
+                Gardiennage 24h/24 • Agents SSIAP • Surveillance Magasin • Sécurité Cynophile • Protection VIP
+                <br className="hidden sm:block" />
+                <span className="text-amber-400/80">Paris & Roubaix</span> • Intervention Rapide • Autorisation AUT-059-2123
+              </motion.p>
+            </header>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 4, ease: "easeOut", delay: 2.5 }}
+              className="relative"
+            >
+              {/* Image avec système de mesure technique */}
+              <div className="relative inline-block">
+                
+                {/* Image pure */}
+                <div className="relative">
+              <img 
+                src="/images/photo_groupe.jpeg"
+                alt="Équipe Prestige Sécurité - Société de sécurité privée agréée Paris Roubaix - Agents SSIAP gardiennage surveillance 24h/24"
+                    className="max-w-full max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] lg:max-h-[55vh] object-contain w-auto h-auto filter contrast-105 brightness-102"
+                  />
+                </div>
+
+                {/* Système de cotation technique avancé */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 3, delay: 5 }}
+                  className="absolute -inset-8 sm:-inset-12 lg:-inset-16 pointer-events-none"
+                >
+                  {/* Lignes de construction principales */}
+                  <div className="absolute top-0 left-0 right-0 h-[0.3px] bg-amber-400/30" />
+                  <div className="absolute bottom-0 left-0 right-0 h-[0.3px] bg-amber-400/30" />
+                  <div className="absolute top-0 bottom-0 left-0 w-[0.3px] bg-amber-400/30" />
+                  <div className="absolute top-0 bottom-0 right-0 w-[0.3px] bg-amber-400/30" />
+                  
+                  {/* Lignes de mesure diagonales */}
+                  <div className="absolute top-0 left-0 w-4 h-4 sm:w-6 sm:h-6 border-l border-t border-amber-400/50" />
+                  <div className="absolute top-0 right-0 w-4 h-4 sm:w-6 sm:h-6 border-r border-t border-amber-400/50" />
+                  <div className="absolute bottom-0 left-0 w-4 h-4 sm:w-6 sm:h-6 border-l border-b border-amber-400/50" />
+                  <div className="absolute bottom-0 right-0 w-4 h-4 sm:w-6 sm:h-6 border-r border-b border-amber-400/50" />
+                </motion.div>
+
+                {/* Annotations techniques sophistiquées */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.5, delay: 8 }}
+                  className="absolute -top-8 sm:-top-10 -left-8 sm:-left-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight"
+                  style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+                >
+                  <div>A1</div>
+                  <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.5, delay: 8.3 }}
+                  className="absolute -top-8 sm:-top-10 -right-8 sm:-right-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight text-right"
+                  style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+                >
+                  <div>B1</div>
+                  <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.5, delay: 8.6 }}
+                  className="absolute -bottom-8 sm:-bottom-10 -left-8 sm:-left-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight"
+                  style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+                >
+                  <div>C1</div>
+                  <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.5, delay: 8.9 }}
+                  className="absolute -bottom-8 sm:-bottom-10 -right-8 sm:-right-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight text-right"
+                  style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+                >
+                  <div>D1</div>
+                  <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
+                </motion.div>
+
+                {/* Points de mesure précis */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1, delay: 9.5 }}
+                  className="absolute top-1/4 -left-2 w-1 h-1 bg-amber-400/60 rounded-full"
+                />
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1, delay: 9.7 }}
+                  className="absolute top-1/4 -right-2 w-1 h-1 bg-amber-400/60 rounded-full"
+                />
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1, delay: 9.9 }}
+                  className="absolute bottom-1/4 -left-2 w-1 h-1 bg-amber-400/60 rounded-full"
+                />
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1, delay: 10.1 }}
+                  className="absolute bottom-1/4 -right-2 w-1 h-1 bg-amber-400/60 rounded-full"
                 />
               </div>
+            </motion.div>
+          </div>
 
-              {/* Système de cotation technique avancé */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 3, delay: 5 }}
-                className="absolute -inset-8 sm:-inset-12 lg:-inset-16 pointer-events-none"
-              >
-                {/* Lignes de construction principales */}
-                <div className="absolute top-0 left-0 right-0 h-[0.3px] bg-amber-400/30" />
-                <div className="absolute bottom-0 left-0 right-0 h-[0.3px] bg-amber-400/30" />
-                <div className="absolute top-0 bottom-0 left-0 w-[0.3px] bg-amber-400/30" />
-                <div className="absolute top-0 bottom-0 right-0 w-[0.3px] bg-amber-400/30" />
-                
-                {/* Lignes de mesure diagonales */}
-                <div className="absolute top-0 left-0 w-4 h-4 sm:w-6 sm:h-6 border-l border-t border-amber-400/50" />
-                <div className="absolute top-0 right-0 w-4 h-4 sm:w-6 sm:h-6 border-r border-t border-amber-400/50" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 sm:w-6 sm:h-6 border-l border-b border-amber-400/50" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 sm:w-6 sm:h-6 border-r border-b border-amber-400/50" />
-              </motion.div>
-
-              {/* Annotations techniques sophistiquées */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 8 }}
-                className="absolute -top-8 sm:-top-10 -left-8 sm:-left-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight"
-                style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-              >
-                <div>A1</div>
-                <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 8.3 }}
-                className="absolute -top-8 sm:-top-10 -right-8 sm:-right-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight text-right"
-                style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-              >
-                <div>B1</div>
-                <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 8.6 }}
-                className="absolute -bottom-8 sm:-bottom-10 -left-8 sm:-left-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight"
-                style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-              >
-                <div>C1</div>
-                <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 8.9 }}
-                className="absolute -bottom-8 sm:-bottom-10 -right-8 sm:-right-10 text-amber-400/60 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] leading-tight text-right"
-                style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-              >
-                <div>D1</div>
-                <div className="text-amber-400/40 text-[6px] sm:text-[8px] mt-1">REF</div>
-              </motion.div>
-
-              {/* Points de mesure précis */}
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, delay: 9.5 }}
-                className="absolute top-1/4 -left-2 w-1 h-1 bg-amber-400/60 rounded-full"
-              />
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, delay: 9.7 }}
-                className="absolute top-1/4 -right-2 w-1 h-1 bg-amber-400/60 rounded-full"
-              />
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, delay: 9.9 }}
-                className="absolute bottom-1/4 -left-2 w-1 h-1 bg-amber-400/60 rounded-full"
-              />
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, delay: 10.1 }}
-                className="absolute bottom-1/4 -right-2 w-1 h-1 bg-amber-400/60 rounded-full"
-              />
-            </div>
+          {/* Indicateur de défilement artistique */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 10.5 }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          >
+            <motion.div 
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="text-amber-400/30 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] uppercase"
+              style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+            >
+              SCROLL
+            </motion.div>
           </motion.div>
-        </div>
 
-        {/* Indicateur de défilement artistique */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 10.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div 
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="text-amber-400/30 text-[8px] sm:text-[10px] font-extralight tracking-[0.4em] uppercase"
+          {/* Informations techniques sophistiquées */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 11 }}
+            className="absolute bottom-8 right-4 sm:right-8 text-amber-400/25 text-[7px] sm:text-[9px] font-extralight tracking-[0.6em] rotate-90 origin-bottom-right leading-loose"
             style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
           >
-            SCROLL
+            <div>PRESTIGE.SEC</div>
+            <div className="text-amber-400/15 text-[6px] sm:text-[7px] mt-2">EST.2008</div>
           </motion.div>
-        </motion.div>
 
-        {/* Informations techniques sophistiquées */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 11 }}
-          className="absolute bottom-8 right-4 sm:right-8 text-amber-400/25 text-[7px] sm:text-[9px] font-extralight tracking-[0.6em] rotate-90 origin-bottom-right leading-loose"
-          style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-        >
-          <div>PRESTIGE.SEC</div>
-          <div className="text-amber-400/15 text-[6px] sm:text-[7px] mt-2">EST.2008</div>
-        </motion.div>
-
-        {/* Coordonnées et métadonnées */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 11.5 }}
-          className="absolute top-24 sm:top-32 left-4 sm:left-8 text-amber-400/40 text-[7px] sm:text-[9px] font-extralight leading-loose"
-          style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-        >
-          <div className="space-y-1">
-            <div>LAT: 48.8566°N</div>
-            <div>LON: 2.3522°E</div>
-            <div className="text-amber-400/30 text-[6px] sm:text-[7px] mt-3">PARIS.FR</div>
-            <div className="text-amber-400/30 text-[6px] sm:text-[7px]">UTC+01:00</div>
-          </div>
-        </motion.div>
-
-        {/* Données techniques en bas à gauche */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 12 }}
-          className="absolute bottom-8 left-4 sm:left-8 text-amber-400/40 text-[7px] sm:text-[9px] font-extralight leading-loose"
-          style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-        >
-          <div className="space-y-1">
-            <div>AGENTS: ACTIFS</div>
-            <div>STATUS: OPERATIONNEL</div>
-            <div className="text-amber-400/30 text-[6px] sm:text-[7px] mt-3">AUT-059-2123</div>
-            <div className="text-amber-400/30 text-[6px] sm:text-[7px]">12-09-2024</div>
-          </div>
-        </motion.div>
-
-        {/* Horloge numérique en haut à droite */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 12.5 }}
-          className="absolute top-24 sm:top-32 right-4 sm:right-8 text-amber-400/40 text-[7px] sm:text-[9px] font-extralight text-right leading-loose"
-          style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
-        >
-          <div className="space-y-1">
-            <motion.div
-              animate={{ opacity: [0.6, 1, 0.6] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              {new Date().toLocaleTimeString('fr-FR', { 
-                hour12: false,
-                hour: '2-digit',
-                minute: '2-digit'
-              })}
-            </motion.div>
-            <div className="text-amber-400/30 text-[6px] sm:text-[7px]">
-              {new Date().toLocaleDateString('fr-FR', {
-                day: '2-digit',
-                month: '2-digit', 
-                year: 'numeric'
-              })}
+          {/* Coordonnées et métadonnées */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 11.5 }}
+            className="absolute top-24 sm:top-32 left-4 sm:left-8 text-amber-400/40 text-[7px] sm:text-[9px] font-extralight leading-loose"
+            style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+          >
+            <div className="space-y-1">
+              <div>LAT: 48.8566°N</div>
+              <div>LON: 2.3522°E</div>
+              <div className="text-amber-400/30 text-[6px] sm:text-[7px] mt-3">PARIS.FR</div>
+              <div className="text-amber-400/30 text-[6px] sm:text-[7px]">UTC+01:00</div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Lignes de connexion subtiles entre les éléments */}
-        <motion.div
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 8, delay: 13, ease: "easeInOut" }}
-          className="absolute inset-0 pointer-events-none"
-        >
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <motion.path
-              d="M 5,12 L 95,12 L 95,95 L 5,95 Z"
-              stroke="rgba(255, 195, 0, 0.15)"
-              strokeWidth="0.15"
-              fill="none"
-              strokeDasharray="0.5,2"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 10, delay: 13 }}
+          {/* Données techniques en bas à gauche */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 12 }}
+            className="absolute bottom-8 left-4 sm:left-8 text-amber-400/40 text-[7px] sm:text-[9px] font-extralight leading-loose"
+            style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+          >
+            <div className="space-y-1">
+              <div>AGENTS: ACTIFS</div>
+              <div>STATUS: OPERATIONNEL</div>
+              <div className="text-amber-400/30 text-[6px] sm:text-[7px] mt-3">AUT-059-2123</div>
+              <div className="text-amber-400/30 text-[6px] sm:text-[7px]">12-09-2024</div>
+            </div>
+          </motion.div>
+
+          {/* Horloge numérique en haut à droite */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 12.5 }}
+            className="absolute top-24 sm:top-32 right-4 sm:right-8 text-amber-400/40 text-[7px] sm:text-[9px] font-extralight text-right leading-loose"
+            style={{ fontFamily: 'SF Mono, Monaco, monospace' }}
+          >
+            <div className="space-y-1">
+              <motion.div
+                animate={{ opacity: [0.6, 1, 0.6] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                {new Date().toLocaleTimeString('fr-FR', { 
+                  hour12: false,
+                  hour: '2-digit',
+                  minute: '2-digit'
+                })}
+              </motion.div>
+              <div className="text-amber-400/30 text-[6px] sm:text-[7px]">
+                {new Date().toLocaleDateString('fr-FR', {
+                  day: '2-digit',
+                  month: '2-digit', 
+                  year: 'numeric'
+                })}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Lignes de connexion subtiles entre les éléments */}
+          <motion.div
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 8, delay: 13, ease: "easeInOut" }}
+            className="absolute inset-0 pointer-events-none"
+          >
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <motion.path
+                d="M 5,12 L 95,12 L 95,95 L 5,95 Z"
+                stroke="rgba(255, 195, 0, 0.15)"
+                strokeWidth="0.15"
+                fill="none"
+                strokeDasharray="0.5,2"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 10, delay: 13 }}
+              />
+            </svg>
+          </motion.div>
+
+          {/* Animation de scan subtile */}
+          <motion.div
+            initial={{ x: '-100%', opacity: 0 }}
+              animate={{
+              x: ['100%', '-100%'],
+              opacity: [0, 0.15, 0.3, 0.15, 0]
+              }}
+              transition={{
+              duration: 15, 
+                repeat: Infinity,
+              ease: "linear",
+              delay: 15 
+              }}
+            className="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-amber-400/40 to-transparent"
             />
-          </svg>
-        </motion.div>
-
-        {/* Animation de scan subtile */}
-        <motion.div
-          initial={{ x: '-100%', opacity: 0 }}
-            animate={{
-            x: ['100%', '-100%'],
-            opacity: [0, 0.15, 0.3, 0.15, 0]
-            }}
-            transition={{
-            duration: 15, 
-              repeat: Infinity,
-            ease: "linear",
-            delay: 15 
-            }}
-          className="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-amber-400/40 to-transparent"
-          />
-      </section>
+        </section>
+      </main>
 
       {/* Section Vidéo Mercedes Ultra Premium */}
       <section className="py-32 bg-black relative overflow-hidden">

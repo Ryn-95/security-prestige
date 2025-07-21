@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/#services</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- À propos -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/#about</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/#contact</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page Contact -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/contact</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Services spécifiques -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?service=gardiennage</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?service=ssiap</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?service=magasin</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?service=cynophile</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?service=vip</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Zones géographiques -->
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?zone=paris</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/?zone=roubaix</loc>
+    <lastmod>2024-01-21T18:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset> 
