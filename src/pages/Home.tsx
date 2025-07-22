@@ -67,7 +67,7 @@ const translations = {
     authorizationNumber: 'AUT-059-2123-12-09-20240960800',
     legalNotice: 'Conformément à l\'article L.612-14 du Code de la sécurité intérieure :',
     legalText: '« L\'autorisation d\'exercice ne confère aucune prérogative de puissance publique à l\'entreprise ou aux personnes qui en bénéficient. »',
-    allRightsReserved: '© 2024 SÉCURITÉ PRESTIGE — TOUS DROITS RÉSERVÉS',
+    allRightsReserved: '© 2024 PRESTIGE SÉCURITÉ — TOUS DROITS RÉSERVÉS',
     
     // WhatsApp
     whatsappTooltip: 'Nous contacter sur WhatsApp',
@@ -227,7 +227,7 @@ const AnimatedBackground = () => {
   );
 };
 
-// Composant ServiceCard amélioré avec plus d'animations
+// Composant ServiceCard amélioré avec alignement parfait des textes
 const ServiceCard = ({ title, description, image, video, delay = 0 }: { 
   title: string, 
   description: string, 
@@ -271,13 +271,13 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
 
   return (
     <motion.div
-      className="relative overflow-hidden rounded-none"
+      className="relative overflow-hidden rounded-none h-[580px]"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1.2, delay }}
     >
-      <motion.div className="relative">
+      <motion.div className="relative h-full">
         {/* Effet de bordure animée */}
         <motion.div
           className="absolute -inset-[1px] bg-gradient-to-r from-amber-400/20 via-transparent to-amber-400/20"
@@ -291,19 +291,18 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
           }}
         />
 
-        {/* Image et vidéo */}
-        <motion.div className="relative">
+        {/* Image et vidéo - à l'intérieur de la card */}
           <img 
             src={image}
             alt={title}
-            className={`w-full h-[580px] object-cover transition-opacity duration-1000 ${showVideo ? 'opacity-0' : 'opacity-100'}`}
+          className={`w-full h-full object-cover transition-opacity duration-1000 ${showVideo ? 'opacity-0' : 'opacity-100'}`}
           />
           
           {video && (
             <video
               ref={videoRef}
               src={video}
-              className={`absolute inset-0 w-full h-[580px] object-cover transition-opacity duration-1000 ${showVideo ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${showVideo ? 'opacity-100' : 'opacity-0'}`}
               loop
               muted
               playsInline
@@ -350,12 +349,11 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
             />
           ))}
 
-          {/* Contenu avec animations continues */}
-          <div className="absolute bottom-0 left-0 right-0 p-16">
-            <motion.div className="space-y-6">
-              {/* Ligne animée */}
+        {/* Contenu texte - position fixe pour alignement parfait peu importe la longueur */}
+        <div className="absolute bottom-12 left-0 right-0 p-8">
+          {/* Ligne animée - toujours à la même position */}
               <motion.div
-                className="h-[1px] bg-amber-400/60"
+            className="h-[1px] bg-amber-400/60 mb-6"
                 animate={{
                   width: ["0%", "100%", "0%"],
                   x: ["0%", "0%", "100%"],
@@ -367,9 +365,11 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
                 }}
               />
 
-              {/* Titre avec animation de flottement */}
+          {/* Zone de contenu avec hauteur fixe pour alignement parfait */}
+          <div className="h-32 flex flex-col justify-start">
+            {/* Titre avec animation de flottement - position fixe */}
               <motion.h3
-                className="text-white text-3xl font-extralight tracking-[0.02em] leading-tight"
+              className="text-white text-3xl font-extralight tracking-[0.02em] leading-tight mb-4 h-16 flex items-center"
                 style={{ 
                   fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
                   fontWeight: 100
@@ -387,9 +387,9 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
                 {title}
               </motion.h3>
 
-              {/* Description avec animation de fade */}
+            {/* Description avec animation de fade - hauteur contrôlée */}
               <motion.p
-                className="text-white/70 font-extralight text-base leading-relaxed tracking-wide"
+              className="text-white/70 font-extralight text-base leading-relaxed tracking-wide flex-1 overflow-hidden"
                 style={{ 
                   fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
                   fontWeight: 100
@@ -403,12 +403,18 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
                   ease: "easeInOut",
                 }}
               >
-                {description}
+              {description.split('\n').map((line, index) => (
+                <span key={index}>
+                  {line}
+                  {index < description.split('\n').length - 1 && <br />}
+                </span>
+              ))}
               </motion.p>
+          </div>
 
-              {/* Indicateur animé */}
+          {/* Indicateur animé - position fixe */}
               <motion.div
-                className="absolute bottom-8 right-8 flex items-center space-x-2"
+            className="flex items-center space-x-2 mt-4"
                 animate={{
                   scale: [1, 1.1, 1],
                 }}
@@ -441,10 +447,8 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
                     delay: 0.5,
                   }}
                 />
-              </motion.div>
             </motion.div>
           </div>
-        </motion.div>
       </motion.div>
     </motion.div>
   );
@@ -498,21 +502,21 @@ const ServicesSection = () => {
           {[
             {
               title: "Agent de Sécurité Rondier",
-              description: "Surveillance statique 24/7\nRondes d'intervention rapide\nSécurisation des accès\nVeille opérationnelle",
+              description: "Surveillance statique 24h/24 ;\nRondes d'intervention rapide ;\nSécurisation des accès ;\nVeille opérationnelle.",
               image: "/images/gardiennage.jpeg",
               video: "/videos/5122837_Security_Guard_Security_3840x2160.mp4",
               delay: 0.2,
             },
             {
               title: "Agent de Sécurité",
-              description: "Prévention des vols\nGestion des incivilités\nContrôle des accès\nPics d'affluence",
+              description: "Prévention des vols ;\nGestion des incivilités ;\nContrôle des accès ;\nPics d'affluence.",
               image: "/images/secu-MAGASIN.jpeg",
               video: "/videos/securitemagasin.mp4",
               delay: 0.4,
             },
             {
               title: "Agent SSIAP",
-              description: "Certification SSIAP 1, 2, 3\nPrévention incendie\nGestion des évacuations\nPremiers secours",
+              description: "Certification SSIAP 1, 2, 3 ;\nPrévention incendie ;\nGestion des évacuations ;\nPremiers secours.",
               image: "/images/SECU-incendie.jpeg",
               video: "/videos/incendiee2.mp4",
               delay: 0.6,
@@ -527,7 +531,10 @@ const ServicesSection = () => {
           <div className="w-full">
             <ServiceCard
               title="Agent Cynophile"
-              description="Maître-chien certifié\nZones sensibles 24/7\nRondes nocturnes\nChiens dressés et certifiés"
+              description="Maître-chien certifié ;
+Zones sensibles 24h/24 ;
+Rondes nocturnes ;
+Chiens dressés et certifiés."
               image="/images/maitrechien.jpeg"
               video="/videos/gardemaitrechien.mp4"
               delay={0.2}
@@ -536,7 +543,10 @@ const ServicesSection = () => {
           <div className="w-full">
             <ServiceCard
               title="Agent de Surveillance"
-              description="Monitoring vidéo 24/7\nDétection d'intrusion\nGestion des alarmes\nRapports d'intervention"
+              description="Monitoring vidéo 24h/24 ;
+Détection d'intrusion ;
+Gestion des alarmes ;
+Rapports d'intervention."
               image="/images/securitevideo.jpeg"
               video="/videos/agentsurveillance.mp4"
               delay={0.4}
@@ -545,7 +555,9 @@ const ServicesSection = () => {
           <div className="w-full">
             <ServiceCard
               title="Accompagnement VIP"
-              description="Services avec accompagnateur, chauffeurs et véhicules de luxe"
+              description="Services avec accompagnateur ;
+Chauffeurs professionnels ;
+Véhicules de luxe."
               image="/images/accompagnement_vip.jpeg"
               video="/videos/mercedespluie.mp4"
               delay={0.6}
@@ -562,109 +574,163 @@ const ServicesSection = () => {
             transition={{ duration: 1.5 }}
             className="text-center mb-20"
           >
-            <h3 className="text-4xl md:text-5xl font-extralight text-white mb-8 tracking-[-0.02em]"
+            <h3 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white mb-12 tracking-[-0.03em]"
                 style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
               Spécialisations
             </h3>
-            <div className="h-[1px] bg-gradient-to-r from-transparent via-amber-400/40 to-transparent w-24 mx-auto" />
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: 120 }}
+              viewport={{ once: true }}
+              transition={{ duration: 2, delay: 0.5 }}
+              className="h-[1px] bg-gradient-to-r from-transparent via-amber-400/60 to-transparent mx-auto"
+            />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-20 mb-20">
             {[
               {
                 icon: '🏢',
                 title: 'Grande Distribution',
-                subtitle: 'Intervention rapide',
+                description: 'Sécurité fluide et discrète en environnement commercial',
+                points: ['Prévention des vols', 'Contrôle d\'accès', 'Assistance clientèle'],
+                badge: 'Expert',
                 delay: 0.2
               },
               {
-                icon: '🚨',
-                title: 'Sites exposés aux trafics',
-                subtitle: 'Intervention rapide',
+                icon: '🔒',
+                title: 'Sites Sensibles',
+                description: 'Expulsion rapide de squats et sécurisation de zones à risque',
+                points: ['Intervention rapide', 'Présence dissuasive', 'Réhabilitation'],
+                badge: '100% Réussite',
                 delay: 0.4
               },
               {
                 icon: '🚇',
-                title: 'Transports publics',
-                subtitle: 'Sécurisation continue',
+                title: 'Transport Public',
+                description: 'Protection renforcée des infrastructures de transport',
+                points: ['Surveillance 24/7', 'Gestion des flux', 'Contrôle préventif'],
+                badge: 'Spécialiste',
                 delay: 0.6
-              },
-              {
-                icon: '🏘️',
-                title: 'Quartiers sensibles',
-                subtitle: 'Présence dissuasive',
-                delay: 0.8
-              },
-              {
-                icon: '🤝',
-                title: 'Bailleurs sociaux',
-                subtitle: 'Partenariat durable',
-                delay: 1.0
               }
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2, delay: item.delay, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{ scale: 1.02, y: -4 }}
                 className="relative group"
               >
-                {/* Card ultra minimaliste */}
-                <div className="relative bg-white/[0.03] backdrop-blur-sm rounded-3xl p-8 border border-white/5 hover:border-amber-400/20 transition-all duration-500 hover:bg-white/[0.05] h-40 flex flex-col justify-center items-center text-center">
+                {/* Carte ultra épurée */}
+                <div className="relative bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-3xl rounded-2xl border border-white/5 overflow-hidden h-96 flex flex-col justify-between p-8 group-hover:border-amber-400/20 transition-all duration-700">
                   
-                  {/* Icône avec animation */}
-            <motion.div
-                    className="text-4xl mb-4"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: item.delay,
-                    }}
+                  {/* Effet de glow subtil */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400/[0.02] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  
+                  {/* Badge minimaliste */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: item.delay + 0.3 }}
+                    className="absolute top-6 right-6 px-3 py-1 bg-amber-400/10 border border-amber-400/20 backdrop-blur-xl rounded-full"
                   >
-                    {item.icon}
+                    <span className="text-amber-400 text-xs font-extralight tracking-wide">
+                      {item.badge}
+                    </span>
                   </motion.div>
 
-                  {/* Titre */}
-                  <h3 className="text-white/90 font-extralight text-sm mb-2 leading-tight"
-                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
-                    {item.title}
-                  </h3>
-                  
-                  {/* Sous-titre */}
-                  <p className="text-white/40 font-extralight text-xs"
-                     style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
-                    {item.subtitle}
-                  </p>
-                  
-                  {/* Effet de lueur au hover */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-400/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Dot indicator */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-amber-400/60 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500" />
-            </div>
-            </motion.div>
+                  {/* Contenu principal */}
+                  <div className="relative z-10">
+                    {/* Icône épurée */}
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: item.delay + 0.1, type: "spring", bounce: 0.3 }}
+                      className="text-5xl mb-8 opacity-80"
+                    >
+                      {item.icon}
+                    </motion.div>
+
+                    {/* Titre */}
+                    <motion.h4
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: item.delay + 0.2 }}
+                      className="text-2xl font-extralight text-white mb-4 tracking-wide"
+                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}
+                    >
+                      {item.title}
+                    </motion.h4>
+
+                    {/* Description */}
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: item.delay + 0.3 }}
+                      className="text-white/60 font-extralight text-sm leading-relaxed mb-6"
+                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}
+                    >
+                      {item.description}
+                    </motion.p>
+                  </div>
+
+                  {/* Points clés */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: item.delay + 0.4 }}
+                    className="relative z-10 space-y-2"
+                  >
+                    {item.points.map((point, pointIndex) => (
+                      <motion.div
+                        key={pointIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: item.delay + 0.5 + pointIndex * 0.1 }}
+                        className="flex items-center space-x-3"
+                      >
+                        <div className="w-1 h-1 bg-amber-400/60 rounded-full" />
+                        <span className="text-white/50 text-xs font-extralight tracking-wide">
+                          {point}
+                        </span>
+                      </motion.div>
                     ))}
+                  </motion.div>
+
+                  {/* Ligne dorée en bas */}
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: item.delay + 0.6 }}
+                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-amber-400/60 via-amber-400/20 to-transparent transform origin-left"
+                    style={{ width: '100%' }}
+                  />
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Statement minimaliste */}
-                  <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          {/* Statement ultra épuré */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: 1.5 }}
+            transition={{ duration: 1.5, delay: 1 }}
             className="text-center"
           >
-            <p className="text-white/20 font-extralight text-lg max-w-2xl mx-auto leading-relaxed"
+            <p className="text-white/20 font-extralight text-lg max-w-2xl mx-auto leading-relaxed tracking-wide"
                style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
               Notre savoir-faire repose sur des procédures maîtrisées et une présence continue sur le terrain.
             </p>
-              </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -1419,24 +1485,7 @@ export default function Home() {
                   fontWeight: 100
                 }}
               >
-                <span className="text-amber-400">Prestige Sécurité</span><br className="sm:hidden" />
-                <span className="sm:hidden"> </span>Société de Sécurité Privée
               </motion.h1>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut", delay: 2 }}
-                className="text-sm sm:text-base md:text-lg text-white/70 font-extralight max-w-3xl mx-auto mb-6"
-                style={{ 
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                  fontWeight: 100
-                }}
-              >
-                Gardiennage 24h/24 • Agents SSIAP • Surveillance Magasin • Sécurité Cynophile • Protection VIP
-                <br className="hidden sm:block" />
-                <span className="text-amber-400/80">Paris & Roubaix</span> • Intervention Rapide • Autorisation AUT-059-2123
-              </motion.p>
             </header>
 
             <motion.div 
@@ -2659,9 +2708,6 @@ export default function Home() {
               >
                 <div className="bg-black/60 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                   <div className="text-center">
-                    <div className="text-2xl font-extralight text-amber-400 mb-2 tracking-wider">
-                      07 81 84 42 36
-                    </div>
                     <div className="text-white/60 font-extralight text-sm tracking-wide">
                       prestigesecurite59@gmail.com
                     </div>
@@ -2680,62 +2726,107 @@ export default function Home() {
       </section>
 
       {/* Footer professionnel ultra épuré avec responsive amélioré */}
-      <footer className="bg-black pt-24 sm:pt-32 lg:pt-40 pb-8 relative">
+      <footer className="bg-black pt-20 sm:pt-24 lg:pt-28 pb-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Logo centré avec animation subtile */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-center mb-16 sm:mb-20 lg:mb-24"
-          >
-            {/* Halo ultra subtil */}
-            <motion.div
-              animate={{
-                opacity: [0.03, 0.08, 0.03],
-                scale: [1, 1.02, 1],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute inset-0 bg-amber-400/5 rounded-full blur-3xl"
-              style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%', width: '300px', height: '300px' }}
-            />
-            
-            {/* Logo avec animation très subtile */}
-            <motion.img 
-              src="/images/vrailogo.jpeg" 
+          {/* Logo centré */}
+          <div className="text-center mt-8">            
+            {/* Logo sans animation mais GIGANTESQUE */}
+            <img 
+              src="/images/vrailogo-removebg-preview.png" 
               alt="Prestige Sécurité" 
-              className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 w-auto mx-auto relative z-10"
-              animate={{
-                y: [0, -2, 0, 2, 0],
-                rotate: [0, 0.3, -0.2, 0.5, 0],
-                scale: [1, 1.005, 0.998, 1.003, 1],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              className="h-[32rem] sm:h-[36rem] md:h-[40rem] lg:h-[44rem] xl:h-[48rem] w-auto mx-auto"
             />
-          </motion.div>
+          </div>
 
-          {/* Titre "SUIVEZ-NOUS" */}
+          {/* Titre "SUIVEZ-NOUS" - collé au logo */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
-            className="text-center mb-12 sm:mb-16"
+            className="text-center -mt-24"
           >
             <h4 className="text-amber-400/80 font-extralight text-base sm:text-lg tracking-[0.2em] uppercase">
               {t('followUs')}
             </h4>
-            <div className="w-16 h-[1px] bg-amber-400/30 mx-auto mt-4" />
+          </motion.div>
+
+          {/* Réseaux sociaux */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.4 }}
+            className="flex justify-center space-x-8 mb-16 sm:mb-20 lg:mb-24"
+          >
+            {/* Facebook */}
+            <motion.a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:border-amber-400/30 group-hover:bg-white/10 transition-all duration-500">
+                <svg className="w-6 h-6 text-white/70 group-hover:text-amber-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </div>
+              <div className="absolute inset-0 rounded-full bg-amber-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.a>
+
+            {/* Instagram */}
+            <motion.a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:border-amber-400/30 group-hover:bg-white/10 transition-all duration-500">
+                <svg className="w-6 h-6 text-white/70 group-hover:text-amber-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.309-3.44-.907.177.018.357.029.538.029 1.055 0 2.024-.36 2.794-.96-.986-.018-1.816-.669-2.103-1.563.138.018.278.029.424.029.2 0 .394-.027.578-.078-1.03-.208-1.806-1.118-1.806-2.212v-.028c.304.169.652.271 1.022.283-.604-.404-.999-1.094-.999-1.876 0-.413.111-.8.305-1.133 1.111 1.363 2.77 2.26 4.637 2.354-.038-.169-.058-.346-.058-.528 0-1.281 1.038-2.32 2.32-2.32.668 0 1.271.282 1.695.734.529-.104 1.027-.297 1.476-.563-.173.543-.542.999-1.021 1.287.469-.056.917-.181 1.333-.366-.311.465-.705.874-1.158 1.201-.004.098-.006.195-.006.293 0 3.007-2.289 6.474-6.474 6.474z"/>
+                </svg>
+              </div>
+              <div className="absolute inset-0 rounded-full bg-amber-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.a>
+
+            {/* LinkedIn */}
+            <motion.a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:border-amber-400/30 group-hover:bg-white/10 transition-all duration-500">
+                <svg className="w-6 h-6 text-white/70 group-hover:text-amber-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
+              <div className="absolute inset-0 rounded-full bg-amber-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.a>
+
+            {/* Twitter/X */}
+            <motion.a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:border-amber-400/30 group-hover:bg-white/10 transition-all duration-500">
+                <svg className="w-6 h-6 text-white/70 group-hover:text-amber-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </div>
+              <div className="absolute inset-0 rounded-full bg-amber-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.a>
           </motion.div>
 
           {/* Grille d'informations responsive */}
@@ -2841,285 +2932,6 @@ export default function Home() {
           
         </div>
       </footer>
-
-      {/* Section FAQ Expert E-E-A-T - CONTENU 1200+ MOTS */}
-      <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-black via-gray-900/50 to-black relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* En-tête FAQ */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
-            className="text-center mb-16 sm:mb-20"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extralight text-white mb-6 tracking-[-0.02em]">
-              Questions <span className="text-amber-400">Fréquentes</span>
-            </h2>
-            <div className="w-24 h-[1px] bg-amber-400/60 mx-auto mb-8" />
-            <p className="text-white/60 text-lg sm:text-xl max-w-3xl mx-auto font-light">
-              Expertise et conseils d'experts en sécurité privée. Plus de 16 ans d'expérience au service de votre protection.
-            </p>
-          </motion.div>
-
-          {/* FAQ Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            
-            {/* FAQ Item 1 */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-                💰 Quels sont vos tarifs de gardiennage 24h/24 ?
-              </h3>
-              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
-                Nos tarifs de gardiennage varient selon plusieurs facteurs clés : <strong className="text-white">type de site, niveau de risque, équipements spécialisés requis</strong> et fréquence d'intervention. 
-                <br /><br />
-                Pour un <strong className="text-amber-400">devis personnalisé gratuit</strong>, contactez notre équipe au <strong className="text-amber-400">07 81 84 42 36</strong>. 
-                Nos experts analysent vos besoins spécifiques et vous proposent la solution la plus adaptée sous 24h, avec transparence tarifaire complète.
-                <br /><br />
-                <em className="text-white/60">Tous nos devis incluent : analyse de risque, plan de sécurisation personnalisé et formation des équipes.</em>
-              </p>
-            </motion.div>
-
-            {/* FAQ Item 2 */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-                📍 Intervenez-vous sur Paris et Roubaix ?
-              </h3>
-              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
-                Prestige Sécurité intervient sur <strong className="text-white">Paris (75011) et Roubaix (59100)</strong> ainsi que dans toute l'<strong className="text-amber-400">Île-de-France et les Hauts-de-France</strong>.
-                <br /><br />
-                Nos équipes mobiles assurent une <strong className="text-white">intervention rapide 24h/24, 7j/7</strong> avec un délai moyen de 15 minutes en zone urbaine et 30 minutes en périphérie.
-                <br /><br />
-                Zones d'intervention prioritaires : Paris intra-muros, Lille métropole, Valenciennes, Arras, et tous les sites industriels sensibles de la région.
-                <br /><br />
-                <em className="text-white/60">Couverture mobile garantie sur un rayon de 150 km autour de nos bases opérationnelles.</em>
-              </p>
-            </motion.div>
-
-            {/* FAQ Item 3 */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-                🏅 Êtes-vous agréés et certifiés ?
-              </h3>
-              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
-                Prestige Sécurité dispose de l'<strong className="text-amber-400">autorisation préfectorale AUT-059-2123-12-09-20240960800</strong> délivrée par la Préfecture du Nord.
-                <br /><br />
-                Nos agents sont certifiés selon les standards les plus exigeants :
-                <br />
-                • <strong className="text-white">Certification SSIAP 1, 2 et 3</strong> (Service de Sécurité Incendie et d'Assistance à Personnes)
-                <br />
-                • <strong className="text-white">Formation CQP APS</strong> (Agent de Prévention et de Sécurité)
-                <br />
-                • <strong className="text-white">Recyclage obligatoire</strong> tous les 5 ans
-                <br />
-                • <strong className="text-white">Formation continue</strong> aux nouvelles technologies
-                <br /><br />
-                <em className="text-white/60">Conformité totale avec l'article L.612-14 du Code de la sécurité intérieure.</em>
-              </p>
-            </motion.div>
-
-            {/* FAQ Item 4 */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-                🐕 Proposez-vous des services de sécurité cynophile ?
-              </h3>
-              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
-                Nos <strong className="text-amber-400">équipes cynophiles spécialisées</strong> interviennent avec des maîtres-chiens certifiés et des chiens dressés pour la détection et la dissuasion.
-                <br /><br />
-                <strong className="text-white">Spécialités canines :</strong>
-                <br />
-                • Détection de stupéfiants et explosifs
-                <br />
-                • Surveillance de zones sensibles 24h/7j
-                <br />
-                • Rondes nocturnes dissuasives
-                <br />
-                • Protection de sites industriels
-                <br /><br />
-                Nos chiens sont <strong className="text-white">dressés dans des centres agréés</strong> et font l'objet d'un suivi vétérinaire strict. Chaque binôme maître-chien suit une formation continue de 40h par trimestre.
-                <br /><br />
-                <em className="text-white/60">Taux de détection : 98% selon nos derniers audits internes.</em>
-              </p>
-            </motion.div>
-
-            {/* FAQ Item 5 */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-                🏢 Quels types d'entreprises protégez-vous ?
-              </h3>
-              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
-                Prestige Sécurité protège une large gamme d'entreprises et d'institutions :
-                <br /><br />
-                <strong className="text-amber-400">Secteur Commercial :</strong> Grande distribution, centres commerciaux, magasins de luxe, concessions automobiles
-                <br /><br />
-                <strong className="text-amber-400">Secteur Industriel :</strong> Sites pétrochimiques, entrepôts logistiques, zones Seveso, chantiers BTP
-                <br /><br />
-                <strong className="text-amber-400">Secteur Résidentiel :</strong> Résidences de standing, copropriétés, bailleurs sociaux
-                <br /><br />
-                <strong className="text-amber-400">Secteur Institutionnel :</strong> Établissements scolaires, hôpitaux, mairies
-                <br /><br />
-                <em className="text-white/60">Plus de 150 clients nous font confiance depuis 2008, avec un taux de fidélisation de 94%.</em>
-              </p>
-            </motion.div>
-
-            {/* FAQ Item 6 */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-amber-400/30 transition-all duration-500"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-                ⚡ Quel est votre délai d'intervention d'urgence ?
-              </h3>
-              <p className="text-white/80 font-light leading-relaxed text-base sm:text-lg">
-                Notre <strong className="text-amber-400">système d'intervention d'urgence</strong> garantit une réactivité optimale :
-                <br /><br />
-                • <strong className="text-white">Paris Centre :</strong> 8-12 minutes
-                <br />
-                • <strong className="text-white">Banlieue Paris :</strong> 15-20 minutes  
-                <br />
-                • <strong className="text-white">Roubaix/Lille :</strong> 10-15 minutes
-                <br />
-                • <strong className="text-white">Zones rurales :</strong> 25-35 minutes
-                <br /><br />
-                Notre centrale d'alarme opérationnelle 24h/24 coordonne les interventions avec géolocalisation en temps réel et liaison directe avec les forces de l'ordre si nécessaire.
-                <br /><br />
-                <em className="text-white/60">Temps de réponse moyen 2024 : 11 minutes (objectif : 15 minutes max).</em>
-              </p>
-            </motion.div>
-
-          </div>
-
-          {/* CTA Expert */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: 0.8 }}
-            className="text-center mt-16 sm:mt-20"
-          >
-            <div className="bg-gradient-to-r from-amber-400/10 to-amber-600/10 rounded-2xl p-8 sm:p-12 border border-amber-400/20">
-              <h3 className="text-2xl sm:text-3xl font-light text-white mb-4">
-                Une question spécifique ?
-              </h3>
-              <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-                Nos experts sécurité sont à votre disposition pour un conseil personnalisé et gratuit.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+33781844236"
-                  className="bg-amber-400 text-black px-8 py-4 rounded-xl font-semibold hover:bg-amber-300 transition-all duration-300 transform hover:scale-105"
-                >
-                  📞 07 81 84 42 36
-                </a>
-                <a 
-                  href="mailto:prestigesecurite59@gmail.com"
-                  className="border border-amber-400 text-amber-400 px-8 py-4 rounded-xl font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300"
-                >
-                  ✉️ Contact Expert
-                </a>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>
-      </section>
-      
-      <style dangerouslySetInnerHTML={{ __html: `
-        /* Styles globaux pour les interactions mobiles */
-        * {
-          -webkit-tap-highlight-color: transparent;
-        }
-        
-        /* Permettre la sélection de texte normal */
-        body {
-          -webkit-touch-callout: default;
-          -webkit-user-select: text;
-          user-select: text;
-        }
-        
-        /* Désactiver la sélection seulement pour les éléments interactifs */
-        a, button, .cursor-pointer {
-          -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          user-select: none;
-          outline: none !important;
-        }
-        
-        a:focus, button:focus {
-          outline: none !important;
-          box-shadow: none !important;
-        }
-        
-        a:active, button:active {
-          outline: none !important;
-          background: transparent !important;
-        }
-
-        /* Animations personnalisées */
-        @keyframes pulse-glow {
-          0%, 100% { box-shadow: 0 0 5px rgba(251, 191, 36, 0.3); }
-          50% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.6); }
-        }
-        
-        .animate-pulse-glow {
-          animation: pulse-glow 3s ease-in-out infinite;
-        }
-
-        /* Perspective 3D pour les effets de rotation */
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-
-        /* Gradient borders */
-        .gradient-border {
-          position: relative;
-        }
-        
-        .gradient-border::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          padding: 1px;
-          background: linear-gradient(45deg, #fbbf24, transparent, #fbbf24);
-          border-radius: inherit;
-          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          mask-composite: xor;
-        }
-      ` }} />
     </div>
   )
 } 
