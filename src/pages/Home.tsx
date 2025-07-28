@@ -2745,7 +2745,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
-            className="text-center -mt-24"
+            className="text-center -mt-24 mb-16"
           >
             <h4 className="text-amber-400/80 font-extralight text-base sm:text-lg tracking-[0.2em] uppercase cursor-pointer hover:text-amber-400 transition-colors duration-300">
               {t('followUs')} EN CLIQUANT ICI
@@ -2758,7 +2758,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.4 }}
-            className="flex justify-center space-x-8 mb-16 sm:mb-20 lg:mb-24"
+            className="flex justify-center space-x-8 mb-16 sm:mb-20 lg:mb-24 mt-8"
           >
             {/* Facebook */}
             <motion.a
