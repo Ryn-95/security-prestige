@@ -21,7 +21,7 @@ Allow: /robots.txt
 # Disallow: /admin/
 
 # Sitemap
-Sitemap: https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app/sitemap.xml
+Sitemap: https://prestigesecuritefrance.fr/sitemap.xml
 
 # Crawl-delay (optionnel)
 Crawl-delay: 1
