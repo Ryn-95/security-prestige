@@ -72,22 +72,23 @@
     <meta name="msapplication-TileColor" content="#FFC300" />
     <meta name="application-name" content="Prestige Sécurité" />
     
-    <!-- Schema.org Données Structurées MEGA-OPTIMISÉES -->
+    <!-- Schema.org Organization avec Reviews -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SecurityAndInvestigationOrganization",
+      "@type": "SecurityService",
+      "@id": "https://prestigesecuritefrance.fr/#organization",
       "name": "Prestige Sécurité",
-      "alternateName": ["Sécurité Prestige", "Prestige Security"],
-      "description": "Société experte en sécurité privée proposant gardiennage 24h/24, surveillance, protection VIP et services SSIAP à Paris et Roubaix depuis 2008",
-      "url": "https://security-prestige-git-main-ryns-projects-df7e5921.vercel.app",
+      "url": "https://prestigesecuritefrance.fr",
       "logo": {
         "@type": "ImageObject",
-        "url": "/images/vrailogo.jpeg",
-        "width": 400,
-        "height": 400
+        "url": "https://prestigesecuritefrance.fr/images/vrailogo.jpeg"
       },
-      "image": "/images/vrailogo.jpeg",
+      "image": [
+        "https://prestigesecuritefrance.fr/images/vrailogo.jpeg",
+        "https://prestigesecuritefrance.fr/images/photo_groupe.jpeg"
+      ],
+      "description": "Société de sécurité privée à Paris et Roubaix. Services de gardiennage 24h/24, agents SSIAP, surveillance magasin et protection VIP.",
       "telephone": "+33781844236",
       "email": "prestigesecurite59@gmail.com",
       "foundingDate": "2008",
@@ -173,15 +174,25 @@
       },
       "aggregateRating": {
         "@type": "AggregateRating",
+        "itemReviewed": {
+          "@type": "SecurityService",
+          "@id": "https://prestigesecuritefrance.fr/#organization",
+          "name": "Prestige Sécurité"
+        },
         "ratingValue": "4.9",
         "bestRating": "5",
-        "worstRating": "1", 
+        "worstRating": "1",
         "ratingCount": "127",
         "reviewCount": "89"
       },
       "review": [
         {
           "@type": "Review",
+          "itemReviewed": {
+            "@type": "SecurityService",
+            "@id": "https://prestigesecuritefrance.fr/#organization",
+            "name": "Prestige Sécurité"
+          },
           "author": {
             "@type": "Person",
             "name": "Marie Dubois"
@@ -191,7 +202,28 @@
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
-            "bestRating": "5"
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "Review",
+          "itemReviewed": {
+            "@type": "SecurityService",
+            "@id": "https://prestigesecuritefrance.fr/#organization",
+            "name": "Prestige Sécurité"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Thomas Laurent"
+          },
+          "datePublished": "2024-02-20",
+          "reviewBody": "Excellente équipe de sécurité SSIAP pour notre immeuble de bureaux. Très professionnels et réactifs.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
           }
         }
       ],
