@@ -1,53 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://prestigesecuritefrance.fr/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.prestigesecuritefrance.fr/</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://prestigesecuritefrance.fr/gardiennage</loc>
+    <loc>https://www.prestigesecuritefrance.fr/services</loc>
+    <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://prestigesecuritefrance.fr/surveillance</loc>
+    <loc>https://www.prestigesecuritefrance.fr/contact</loc>
+    <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://prestigesecuritefrance.fr/ssiap</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://prestigesecuritefrance.fr/protection-vip</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://prestigesecuritefrance.fr/agent-cynophile</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://prestigesecuritefrance.fr/securite-magasin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://prestigesecuritefrance.fr/securite-incendie</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://prestigesecuritefrance.fr/paris</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.prestigesecuritefrance.fr/gardiennage</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://prestigesecuritefrance.fr/roubaix</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.prestigesecuritefrance.fr/surveillance</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.prestigesecuritefrance.fr/ssiap</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.prestigesecuritefrance.fr/protection-vip</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.prestigesecuritefrance.fr/agent-cynophile</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.prestigesecuritefrance.fr/paris</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.prestigesecuritefrance.fr/roubaix</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset> 

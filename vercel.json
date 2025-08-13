@@ -122,5 +122,13 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "prestigesecuritefrance.fr" }],
+      "destination": "https://www.prestigesecuritefrance.fr/:path*",
+      "permanent": true
+    }
   ]
 } 

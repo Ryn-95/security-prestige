@@ -21,7 +21,7 @@ Allow: /robots.txt
 # Disallow: /admin/
 
 # Sitemap
-Sitemap: https://prestigesecuritefrance.fr/sitemap.xml
+Sitemap: https://www.prestigesecuritefrance.fr/sitemap.xml
 
 # Crawl-delay (optionnel)
 Crawl-delay: 1
