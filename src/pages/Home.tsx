@@ -1422,9 +1422,10 @@ export default function Home() {
               Depuis 2008, Prestige Sécurité s'est imposée comme un leader de la sécurité privée. Notre mission est d'assurer votre tranquillité d'esprit grâce à des solutions sur-mesure et des agents hautement qualifiés, disponibles 24h/24 et 7j/7.
             </p>
             <img 
-              src="/images/photo_groupe.jpeg" 
-              alt="Équipe d'agents de Prestige Sécurité en uniforme, experts en gardiennage et surveillance à Paris et Roubaix." 
-              className="rounded-lg shadow-2xl mx-auto"
+              src="/images/photo_groupe.jpeg"
+              alt="Équipe Prestige Sécurité - Société de sécurité privée agréée Paris Roubaix - Agents SSIAP gardiennage surveillance 24h/24"
+              className="max-w-full max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] lg:max-h-[55vh] object-contain w-auto h-auto filter contrast-105 brightness-102"
+              loading="lazy" decoding="async"
             />
           </div>
         </section>
