@@ -44,12 +44,14 @@
     <meta property="og:description" content="Société experte en sécurité privée depuis 2008. Gardiennage, agents SSIAP, surveillance magasin, protection VIP. Paris & Roubaix. Intervention 24h/24. Autorisation AUT-059-2123." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://prestigesecuritefrance.fr" />
-    <meta property="og:image" content="/images/vrailogo.jpeg" />
+    <meta property="og:image" content="https://prestigesecuritefrance.fr/images/vrailogo.jpeg" />
+    <meta property="og:image:secure_url" content="https://prestigesecuritefrance.fr/images/vrailogo.jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Logo Prestige Sécurité - Société de sécurité privée agréée" />
     <meta property="og:site_name" content="Prestige Sécurité" />
     <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="business:contact_data:street_address" content="40 rue Alexandre Dumas" />
     <meta property="business:contact_data:locality" content="Paris" />
     <meta property="business:contact_data:postal_code" content="75011" />
@@ -59,8 +61,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="🥇 Prestige Sécurité - Sécurité Privée Paris Roubaix" />
     <meta name="twitter:description" content="Société experte en sécurité privée depuis 2008. Gardiennage 24h/24, agents SSIAP, surveillance magasin, protection VIP." />
-    <meta name="twitter:image" content="/images/vrailogo.jpeg" />
-    <meta name="twitter:site" content="@PrestigeSecurity" />
+    <meta name="twitter:image" content="https://prestigesecuritefrance.fr/images/vrailogo.jpeg" />
+    <meta name="twitter:site" content="@prestigesecu" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://prestigesecuritefrance.fr" />
@@ -244,9 +246,78 @@
       "name": "Prestige Sécurité",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://prestigesecuritefrance.fr/?q={search_term_string}",
+        "target": "https://www.google.com/search?q=site:prestigesecuritefrance.fr+{search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    }
+    </script>
+
+    <!-- Logo Schema (recommandation Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://prestigesecuritefrance.fr/#logo",
+      "url": "https://prestigesecuritefrance.fr",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://prestigesecuritefrance.fr/images/vrailogo.jpeg"
+      }
+    }
+    </script>
+
+    <!-- LocalBusiness Paris & Roubaix (entités locales) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://prestigesecuritefrance.fr/#paris",
+          "name": "Prestige Sécurité - Paris",
+          "url": "https://prestigesecuritefrance.fr",
+          "image": "https://prestigesecuritefrance.fr/images/vrailogo.jpeg",
+          "telephone": "+33781844236",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "40 rue Alexandre Dumas",
+            "addressLocality": "Paris",
+            "postalCode": "75011",
+            "addressRegion": "Île-de-France",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 48.857,
+            "longitude": 2.398
+          },
+          "openingHours": "Mo-Su 00:00-23:59",
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=40+rue+Alexandre+Dumas+75011+Paris"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://prestigesecuritefrance.fr/#roubaix",
+          "name": "Prestige Sécurité - Roubaix",
+          "url": "https://prestigesecuritefrance.fr",
+          "image": "https://prestigesecuritefrance.fr/images/vrailogo.jpeg",
+          "telephone": "+33781844236",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "25 Boulevard de la République",
+            "addressLocality": "Roubaix",
+            "postalCode": "59100",
+            "addressRegion": "Hauts-de-France",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.692,
+            "longitude": 3.178
+          },
+          "openingHours": "Mo-Su 00:00-23:59",
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=25+Boulevard+de+la+République+59100+Roubaix"
+        }
+      ]
     }
     </script>
 
