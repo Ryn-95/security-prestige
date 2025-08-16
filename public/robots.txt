@@ -33,6 +33,13 @@ Allow: /
 # Bing Bot spécifique  
 User-agent: Bingbot
 Allow: /
+Allow: /BingSiteAuth.xml
+Crawl-delay: 1
+
+# Directives pour MSNBot
+User-agent: msnbot
+Allow: /
+Crawl-delay: 1
 
 # Directives pour les moteurs de recherche français
 User-agent: OrangeBot
