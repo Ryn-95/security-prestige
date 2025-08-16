@@ -34,6 +34,7 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 Allow: /BingSiteAuth.xml
+Allow: /bing-31DC9F63FAB886A95204507A27A2D103.txt
 Crawl-delay: 1
 
 # Directives pour MSNBot
