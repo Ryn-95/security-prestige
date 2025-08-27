@@ -936,6 +936,24 @@ export default function Home() {
 
   return (
     <div className="bg-black text-white min-h-screen font-thin relative overflow-hidden">
+      {/* Section SEO optimisée */}
+      <div className="hidden">
+        <h1>PrestigeSecurite France - Leader de la Sécurité Privée à Paris et Roubaix</h1>
+        <h2>Prestige Securite France - Société de Sécurité Privée Certifiée</h2>
+        <p>
+          Bienvenue chez PrestigeSecurite France, votre partenaire de confiance en sécurité privée depuis 2008. 
+          Prestige Securite France est spécialisé dans le gardiennage professionnel, la protection SSIAP et la sécurité VIP. 
+          PrestigeSecuriteFrance assure une présence 24h/24 et 7j/7 à Paris, Roubaix et dans toute la France.
+        </p>
+        <p>
+          PrestigeSecurite France - Notre expertise en sécurité privée couvre tous vos besoins : surveillance de sites sensibles, 
+          protection de magasins, sécurité événementielle, et services de maître-chien. Prestige Securite France 
+          certification AUT-059-2123 garantissant notre professionnalisme.
+        </p>
+        <p>
+          Contactez PrestigeSecurite France pour tous vos besoins de sécurité. Prestige Securite France - Votre sécurité est notre priorité.
+        </p>
+      </div>
       {/* Écran de chargement épuré et professionnel */}
       <AnimatePresence>
         {isLoading && (

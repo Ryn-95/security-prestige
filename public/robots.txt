@@ -1,12 +1,19 @@
 User-agent: *
 Allow: /
 
-# Pages importantes à indexer en priorité
+# Pages importantes à indexer en priorité - SECTEUR SÉCURITÉ
 Allow: /
 Allow: /#services
 Allow: /#about  
 Allow: /#contact
 Allow: /contact
+Allow: /gardiennage
+Allow: /surveillance  
+Allow: /ssiap
+Allow: /protection-vip
+Allow: /agent-cynophile
+Allow: /paris
+Allow: /roubaix
 
 # Assets et ressources
 Allow: /images/
@@ -21,7 +28,7 @@ Allow: /robots.txt
 # Disallow: /admin/
 
 # Sitemap
-Sitemap: https://prestigesecuritefrance.fr/sitemap.xml
+Sitemap: https://www.prestigesecuritefrance.fr/sitemap.xml
 
 # Crawl-delay (optionnel)
 Crawl-delay: 1
