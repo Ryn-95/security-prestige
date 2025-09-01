@@ -487,7 +487,7 @@ const ServicesSection = () => {
           />
 
           <motion.p
-            className="text-white/40 font-extralight text-2xl tracking-[0.02em]"
+            className="text-white/90 font-medium text-2xl tracking-[0.02em]"
             style={{ 
               fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
               fontWeight: 100
@@ -672,8 +672,8 @@ Véhicules de luxe."
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.8, delay: item.delay + 0.3 }}
-                      className="text-white/60 font-extralight text-sm leading-relaxed mb-6"
-                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}
+                      className="text-white/90 font-medium text-sm leading-relaxed mb-6"
+                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}
                     >
                       {item.description}
                     </motion.p>
@@ -726,8 +726,8 @@ Véhicules de luxe."
             transition={{ duration: 1.5, delay: 1 }}
             className="text-center"
           >
-            <p className="text-white/20 font-extralight text-lg max-w-2xl mx-auto leading-relaxed tracking-wide"
-               style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
+            <p className="text-white/80 font-medium text-lg max-w-2xl mx-auto leading-relaxed tracking-wide"
+               style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>
               Notre savoir-faire repose sur des procédures maîtrisées et une présence continue sur le terrain.
             </p>
           </motion.div>
@@ -790,10 +790,10 @@ const RecruitmentSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-xl md:text-2xl text-white/60 font-extralight mb-16 text-center max-w-2xl"
+          className="text-xl md:text-2xl text-white/90 font-medium mb-16 text-center max-w-2xl"
           style={{ 
             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-            fontWeight: 100
+            fontWeight: 500
           }}
         >
           Rejoignez une équipe d'agents expérimentés dans la gestion de sites sensibles. Notre capacité d'adaptation rapide et notre réactivité immédiate font notre force.
@@ -1789,7 +1789,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.8 }}
-                  className="text-white/60 font-thin text-lg max-w-2xl"
+                  className="text-white/90 font-medium text-lg max-w-2xl"
               >
                 {t('aboutDescription')}
               </motion.p>
@@ -2132,10 +2132,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, delay: 1.4 }}
-                className="text-white/40 font-extralight text-base md:text-lg max-w-[800px] mt-6 leading-[1.35] tracking-[-0.01em]"
+                className="text-white/90 font-medium text-base md:text-lg max-w-[800px] mt-6 leading-[1.35] tracking-[-0.01em]"
                 style={{ 
                   fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                  fontWeight: 100
+                  fontWeight: 500
                 }}
               >
                 Notre expertise s'étend à la sécurisation<br />
@@ -2226,8 +2226,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
-              className="text-white/30 font-extralight text-xl"
-              style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}
+              className="text-white/90 font-medium text-xl"
+              style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}
             >
               Solutions adaptées aux environnements complexes
             </motion.p>
@@ -2325,8 +2325,8 @@ export default function Home() {
             transition={{ duration: 1.5, delay: 1.5 }}
             className="text-center"
           >
-            <p className="text-white/20 font-extralight text-lg max-w-2xl mx-auto leading-relaxed"
-               style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
+            <p className="text-white/90 font-medium text-lg max-w-2xl mx-auto leading-relaxed"
+               style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>
               Notre savoir-faire repose sur des procédures maîtrisées et une présence continue sur le terrain.
             </p>
           </motion.div>
@@ -2352,7 +2352,7 @@ export default function Home() {
                 style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
               Spécialisations
             </h2>
-            <p className="text-white/60 font-extralight text-lg">
+            <p className="text-white/90 font-medium text-lg">
               Dashboard Professionnel
             </p>
           </motion.div>
@@ -2607,7 +2607,7 @@ export default function Home() {
             <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6" style={{ color: '#FFC300' }}>
               VIP Elite
             </div>
-            <div className="text-white/60 font-extralight text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 px-4">
+            <div className="text-white/90 font-medium text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 px-4">
               Services avec accompagnateur, chauffeurs et véhicules de luxe
             </div>
           </motion.div>
@@ -2726,10 +2726,10 @@ export default function Home() {
               >
                 <div className="bg-black/60 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                   <div className="text-center">
-                    <div className="text-white/60 font-extralight text-sm tracking-wide">
+                    <div className="text-white/90 font-medium text-sm tracking-wide">
                       prestigesecurite59@gmail.com
                     </div>
-                    <div className="text-white/40 font-extralight text-xs mt-2 tracking-widest">
+                    <div className="text-white/80 font-medium text-xs mt-2 tracking-widest">
                       DISPONIBLE 24H/24 • 7J/7
                     </div>
                   </div>
@@ -2897,7 +2897,7 @@ export default function Home() {
                 <div className="text-white/70 font-light text-sm sm:text-base">
                   {t('email')}
                 </div>
-                <div className="text-white/50 font-light text-xs sm:text-sm uppercase tracking-wider">
+                <div className="text-white/90 font-medium text-xs sm:text-sm uppercase tracking-wider">
                   DISPONIBLE 24H/24 • 7J/7
                 </div>
               </div>
@@ -2943,7 +2943,7 @@ export default function Home() {
             transition={{ duration: 1.5, delay: 1.2 }}
             className="text-center"
           >
-            <p className="text-white/40 font-light text-xs sm:text-sm tracking-wide">
+            <p className="text-white/80 font-medium text-xs sm:text-sm tracking-wide">
               {t('allRightsReserved')}
             </p>
           </motion.div>
