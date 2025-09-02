@@ -389,10 +389,10 @@ const ServiceCard = ({ title, description, image, video, delay = 0 }: {
 
             {/* Description avec animation de fade - hauteur contrôlée */}
               <motion.p
-              className="text-white/70 font-extralight text-base leading-relaxed tracking-wide flex-1 overflow-hidden"
+              className="text-white font-medium text-base leading-relaxed tracking-wide flex-1 overflow-hidden"
                 style={{ 
                   fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                  fontWeight: 100
+                  fontWeight: 500
                 }}
                 animate={{
                   opacity: [0.7, 1, 0.7],
@@ -502,21 +502,21 @@ const ServicesSection = () => {
           {[
             {
               title: "Agent de Sécurité Rondier",
-              description: "Surveillance statique 24h/24 ;\nRondes d'intervention rapide ;\nSécurisation des accès ;\nVeille opérationnelle.",
+              description: "Surveillance statique 24h/24\nRondes d'intervention rapide\nSécurisation des accès\nVeille opérationnelle",
               image: "/images/gardiennage.jpeg",
               video: "/videos/5122837_Security_Guard_Security_3840x2160.mp4",
               delay: 0.2,
             },
             {
               title: "Agent de Sécurité",
-              description: "Prévention des vols ;\nGestion des incivilités ;\nContrôle des accès ;\nPics d'affluence.",
+              description: "Prévention des vols\nGestion des incivilités\nContrôle des accès\nPics d'affluence",
               image: "/images/secu-MAGASIN.jpeg",
               video: "/videos/securitemagasin.mp4",
               delay: 0.4,
             },
             {
               title: "Agent SSIAP",
-              description: "Certification SSIAP 1, 2, 3 ;\nPrévention incendie ;\nGestion des évacuations ;\nPremiers secours.",
+              description: "Certification SSIAP 1, 2, 3\nPrévention incendie\nGestion des évacuations\nPremiers secours",
               image: "/images/SECU-incendie.jpeg",
               video: "/videos/incendiee2.mp4",
               delay: 0.6,
@@ -531,10 +531,10 @@ const ServicesSection = () => {
           <div className="w-full">
             <ServiceCard
               title="Agent Cynophile"
-              description="Maître-chien certifié ;
-Zones sensibles 24h/24 ;
-Rondes nocturnes ;
-Chiens dressés et certifiés."
+              description="Maître-chien certifié
+Zones sensibles 24h/24
+Rondes nocturnes
+Chiens dressés et certifiés"
               image="/images/maitrechien.jpeg"
               video="/videos/gardemaitrechien.mp4"
               delay={0.2}
@@ -543,10 +543,10 @@ Chiens dressés et certifiés."
           <div className="w-full">
             <ServiceCard
               title="Agent de Surveillance"
-              description="Monitoring vidéo 24h/24 ;
-Détection d'intrusion ;
-Gestion des alarmes ;
-Rapports d'intervention."
+              description="Monitoring vidéo 24h/24
+Détection d'intrusion
+Gestion des alarmes
+Rapports d'intervention"
               image="/images/securitevideo.jpeg"
               video="/videos/agentsurveillance.mp4"
               delay={0.4}
@@ -555,9 +555,9 @@ Rapports d'intervention."
           <div className="w-full">
             <ServiceCard
               title="Accompagnement VIP"
-              description="Services avec accompagnateur ;
-Chauffeurs professionnels ;
-Véhicules de luxe."
+              description="Services avec accompagnateur
+Chauffeurs professionnels
+Véhicules de luxe"
               image="/images/accompagnement_vip.jpeg"
               video="/videos/mercedespluie.mp4"
               delay={0.6}
@@ -697,7 +697,7 @@ Véhicules de luxe."
                         className="flex items-center space-x-3"
                       >
                         <div className="w-1 h-1 bg-amber-400/60 rounded-full" />
-                        <span className="text-white/50 text-xs font-extralight tracking-wide">
+                        <span className="text-white text-xs font-medium tracking-wide">
                           {point}
                         </span>
                       </motion.div>
@@ -1001,7 +1001,7 @@ export default function Home() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.5 }}
-                  className="text-white/40 text-xs font-light text-center tabular-nums"
+                  className="text-white font-medium text-xs text-center tabular-nums"
                   style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif' }}
                 >
                   {Math.round(loadingProgress)}%
@@ -1013,7 +1013,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 2 }}
-                className="text-white/30 text-sm font-light tracking-[0.1em] uppercase"
+                className="text-white font-medium text-sm tracking-[0.1em] uppercase"
                 style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif' }}
               >
                 {t('loading')}
@@ -1120,7 +1120,7 @@ export default function Home() {
                     outline: 'none'
                   }}
                 >
-                  <span className="text-white/50 group-hover:text-white font-light text-sm tracking-[0.2em] transition-all duration-500">
+                  <span className="text-white group-hover:text-white font-medium text-sm tracking-[0.2em] transition-all duration-500">
                     {item.label}
                   </span>
                   <span className="absolute -bottom-2 left-1/2 w-1 h-1 bg-amber-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-1/2 group-hover:scale-100" />
@@ -1368,10 +1368,10 @@ export default function Home() {
                 <div className="text-amber-400 text-xl font-light tracking-wider">
                   07 81 84 42 36
                 </div>
-                <div className="text-white/40 text-sm font-extralight">
+                <div className="text-white text-sm font-medium">
                   prestigesecurite59@gmail.com
                 </div>
-                <div className="text-white/30 text-xs font-extralight tracking-widest">
+                <div className="text-white text-xs font-medium tracking-widest">
                   {t('menuHours')}
                 </div>
               </motion.div>
@@ -1395,7 +1395,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
                 onClick={closeMobileMenu}
-                className="absolute top-8 right-8 w-10 h-10 flex items-center justify-center text-white/60 hover:text-amber-400 transition-colors duration-300"
+                className="absolute top-8 right-8 w-10 h-10 flex items-center justify-center text-white hover:text-amber-400 transition-colors duration-300"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
@@ -1803,11 +1803,11 @@ export default function Home() {
                 >
                   <div className="text-center">
                   <div className="text-4xl sm:text-5xl font-thin text-amber-400 mb-2">{t('availability')}</div>
-                  <div className="text-white/60 font-thin">{t('availabilityText')}</div>
+                  <div className="text-white font-medium">{t('availabilityText')}</div>
                 </div>
                   <div className="text-center">
                   <div className="text-4xl sm:text-5xl font-thin text-amber-400">{t('professionalism')}</div>
-                  <div className="text-white/60 font-thin">{t('professionalismText')}</div>
+                  <div className="text-white font-medium">{t('professionalismText')}</div>
               </div>
                 </motion.div>
             </motion.div>
@@ -1904,49 +1904,49 @@ export default function Home() {
                 className="mt-12 grid grid-cols-3 gap-8 text-center"
               >
                 <div className="space-y-2">
-                  <div className="text-white/30 font-extralight text-[10px] uppercase tracking-[0.3em]"
+                  <div className="text-white font-medium text-[10px] uppercase tracking-[0.3em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Sécurité
                   </div>
-                  <div className="text-white/60 font-extralight text-sm"
+                  <div className="text-white font-medium text-sm"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Optimale
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-white/30 font-extralight text-[10px] uppercase tracking-[0.3em]"
+                  <div className="text-white font-medium text-[10px] uppercase tracking-[0.3em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Technologie
                   </div>
-                  <div className="text-white/60 font-extralight text-sm"
+                  <div className="text-white font-medium text-sm"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Mercedes Elite
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-white/30 font-extralight text-[10px] uppercase tracking-[0.3em]"
+                  <div className="text-white font-medium text-[10px] uppercase tracking-[0.3em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     {t('discretion')}
                   </div>
-                  <div className="text-white/60 font-extralight text-sm"
+                  <div className="text-white font-medium text-sm"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Maximale
                   </div>
@@ -2047,49 +2047,49 @@ export default function Home() {
                 className="mt-12 grid grid-cols-3 gap-8 text-center"
               >
                 <div className="space-y-2">
-                  <div className="text-white/30 font-extralight text-[10px] uppercase tracking-[0.3em]"
+                  <div className="text-white font-medium text-[10px] uppercase tracking-[0.3em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Fréquence
                   </div>
-                  <div className="text-white/60 font-extralight text-sm"
+                  <div className="text-white font-medium text-sm"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Toutes les 2h
                 </div>
                     </div>
                 <div className="space-y-2">
-                  <div className="text-white/30 font-extralight text-[10px] uppercase tracking-[0.3em]"
+                  <div className="text-white font-medium text-[10px] uppercase tracking-[0.3em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Contrôle
                     </div>
-                  <div className="text-white/60 font-extralight text-sm"
+                  <div className="text-white font-medium text-sm"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Points d'accès
                     </div>
                     </div>
                 <div className="space-y-2">
-                  <div className="text-white/30 font-extralight text-[10px] uppercase tracking-[0.3em]"
+                  <div className="text-white font-medium text-[10px] uppercase tracking-[0.3em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Rapport
                   </div>
-                  <div className="text-white/60 font-extralight text-sm"
+                  <div className="text-white font-medium text-sm"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Main courante
                 </div>
@@ -2159,10 +2159,10 @@ export default function Home() {
                        }}>
                     12
                 </div>
-                  <div className="text-white/40 font-extralight text-xs uppercase tracking-[0.2em]"
+                  <div className="text-white font-medium text-xs uppercase tracking-[0.2em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Rondes par jour
                 </div>
@@ -2176,10 +2176,10 @@ export default function Home() {
                        }}>
                     15min
                     </div>
-                  <div className="text-white/40 font-extralight text-xs uppercase tracking-[0.2em]"
+                  <div className="text-white font-medium text-xs uppercase tracking-[0.2em]"
                        style={{ 
                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif',
-                         fontWeight: 100
+                         fontWeight: 500
                        }}>
                     Durée ronde
                 </div>
@@ -2296,14 +2296,14 @@ export default function Home() {
                   </motion.div>
                   
                   {/* Titre */}
-                  <h3 className="text-white/90 font-extralight text-sm mb-2 leading-tight"
-                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
+                  <h3 className="text-white font-medium text-sm mb-2 leading-tight"
+                      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>
                     {item.title}
                   </h3>
                   
                   {/* Sous-titre */}
-                  <p className="text-white/40 font-extralight text-xs"
-                     style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 100 }}>
+                  <p className="text-white font-medium text-xs"
+                     style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>
                     {item.subtitle}
                   </p>
 
@@ -2402,8 +2402,8 @@ export default function Home() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="bg-white/[0.02] border border-white/10 rounded-xl p-4"
                       >
-                        <div className="text-white/40 text-xs font-extralight mb-2 uppercase tracking-wider">Zone d'expertise</div>
-                        <div className="text-white/90 font-extralight text-sm">Zones sensibles</div>
+                        <div className="text-white font-medium text-xs mb-2 uppercase tracking-wider">Zone d'expertise</div>
+                        <div className="text-white font-medium text-sm">Zones sensibles</div>
                       </motion.div>
 
                       {/* Secteur */}
@@ -2414,8 +2414,8 @@ export default function Home() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="bg-white/[0.02] border border-white/10 rounded-xl p-4"
                       >
-                        <div className="text-white/40 text-xs font-extralight mb-2 uppercase tracking-wider">Secteur</div>
-                        <div className="text-white/90 font-extralight text-sm">Infrastructure</div>
+                        <div className="text-white font-medium text-xs mb-2 uppercase tracking-wider">Secteur</div>
+                        <div className="text-white font-medium text-sm">Infrastructure</div>
                       </motion.div>
 
                       {/* Type */}
@@ -2426,8 +2426,8 @@ export default function Home() {
                         transition={{ duration: 0.6, delay: 0.5 }}
                         className="bg-white/[0.02] border border-white/10 rounded-xl p-4"
                       >
-                        <div className="text-white/40 text-xs font-extralight mb-2 uppercase tracking-wider">Type</div>
-                        <div className="text-white/90 font-extralight text-sm">Surveillance 24/7</div>
+                        <div className="text-white font-medium text-xs mb-2 uppercase tracking-wider">Type</div>
+                        <div className="text-white font-medium text-sm">Surveillance 24/7</div>
                       </motion.div>
                     </div>
                   </div>
@@ -2453,17 +2453,17 @@ export default function Home() {
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center space-x-3">
                             <span className="text-xl">📁</span>
-                            <span className="text-white/90 font-extralight">Zones Sensibles</span>
+                            <span className="text-white font-medium">Zones Sensibles</span>
                           </div>
                           <div className="flex items-center space-x-2">
                             <span className="text-green-400 text-sm font-extralight">100%</span>
                             <span className="text-green-400/60 text-xs">Réussite</span>
                           </div>
                         </div>
-                        <p className="text-white/50 text-sm font-extralight mb-4">
+                        <p className="text-white font-medium text-sm mb-4">
                           Expulsion rapide de squats et sécurisation de bâtiments exposés aux trafics
                         </p>
-                        <ul className="text-white/40 text-xs space-y-1">
+                        <ul className="text-white text-xs space-y-1">
                           <li>• Intervention rapide • Réhabilitation complète</li>
                         </ul>
                       </motion.div>
@@ -2479,16 +2479,16 @@ export default function Home() {
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center space-x-3">
                             <span className="text-xl">🚊</span>
-                            <span className="text-white/90 font-extralight">Transport</span>
+                            <span className="text-white font-medium">Transport</span>
                   </div>
                           <div className="px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-full text-xs font-extralight">
                             Protection
                           </div>
                         </div>
-                        <p className="text-white/50 text-sm font-extralight mb-4">
+                        <p className="text-white font-medium text-sm mb-4">
                           Protection renforcée des gares, lignes de métro et parkings publics
                         </p>
-                        <ul className="text-white/40 text-xs space-y-1">
+                        <ul className="text-white text-xs space-y-1">
                           <li>• Contrôle des flux • Surveillance 24/7</li>
                         </ul>
                       </motion.div>
@@ -2504,16 +2504,16 @@ export default function Home() {
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center space-x-3">
                             <span className="text-xl">🏗️</span>
-                            <span className="text-white/90 font-extralight">Chantiers</span>
+                            <span className="text-white font-medium">Chantiers</span>
                           </div>
                           <div className="px-3 py-1 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-full text-xs font-extralight">
                             Sécurisé
                         </div>
                         </div>
-                        <p className="text-white/50 text-sm font-extralight mb-4">
+                        <p className="text-white font-medium text-sm mb-4">
                           Reprise en main de chantiers exposés aux actes de vandalisme
                         </p>
-                        <ul className="text-white/40 text-xs space-y-1">
+                        <ul className="text-white text-xs space-y-1">
                           <li>• Stratégie dissuasive • Veille permanente</li>
                         </ul>
                       </motion.div>
@@ -2622,15 +2622,15 @@ export default function Home() {
           >
             <div className="space-y-2">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-extralight" style={{ color: '#FFC300' }}>24/7</div>
-              <div className="text-white/40 font-extralight text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">DISPONIBILITÉ</div>
+              <div className="text-white font-medium text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">DISPONIBILITÉ</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-extralight" style={{ color: '#FFC300' }}>Premium</div>
-              <div className="text-white/40 font-extralight text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">SERVICE</div>
+              <div className="text-white font-medium text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">SERVICE</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-extralight" style={{ color: '#FFC300' }}>100%</div>
-              <div className="text-white/40 font-extralight text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">{t('discretion').toUpperCase()}</div>
+              <div className="text-white font-medium text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em]">{t('discretion').toUpperCase()}</div>
             </div>
           </motion.div>
 
